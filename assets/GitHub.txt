@@ -1,0 +1,14 @@
+git clone URL : សម្រាប់ clone project របស់គេ
+
+git checkout -b NAME : សម្រាប់បង្កើត branch ថ្មី
+git checkout NAME : សម្រាប់ផ្លាស់ប្តូរពី​ branch មួយទៅកាន់ branch មួយផ្សេងទៀត
+
+git stash : សម្រាប់ save អ្វីដែលយើងបានកែរប្រែទុកមួយឡែកសិន ចាំពេល Pull រួចចាំដាក់កូដយើងចូលមកវិញ
+git pull origin main : សម្រាប់ទាញយក code ដែលគេបាន merged រួចចេញពី main
+git stash apply : ដាក់កូដដែលយើងបានសរសេរចូលវិញ
+
+git status : សម្រាប់មើលថាយើងបានធ្វើអ្វីខ្លះ
+git add FILENAME : សម្រាប់ add file ណាមួយ ឬច្រើនចូលទៅក្នុង commit
+git add . : សញ្ញាចុច មានន៏យថាយើងនឹង Add File ទាំងអស់ដែលយើងបានកែរប្រែទៅក្នុង commit
+git commit : សម្រាប់ commit អ្វីដែលយើងបានកែរប្រែចូលទៅក្នុង​ local branch
+git push : សម្រាប់បង្ហោះ branch របស់យើងចូលទៅក្នុង GitHub
