@@ -44,20 +44,56 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     justify-content: flex-end;
 }
 .link{
+    position: relative;
     width: 100px;
     padding: 10px;
     font-weight: 700;
-    background-color: beige;
     border-radius: 12px;
     margin-left: 10px;
     text-align: center;
     align-self: baseline;
     cursor: pointer;
 }
-.link:hover{
-        background-color: rgb(145, 145, 91);
-        color: aliceblue;
+.link:nth-child(1){
+    background-color: beige;
 }
+.link:nth-child(2){
+    background-color: rgb(63, 182, 148);
+}
+.link:nth-child(3):hover{
+    background-color: rgb(250, 250, 237);
+    color: #859400;
+}
+.link:hover{
+    background-color: rgb(145, 145, 91);
+    color: aliceblue;
+}
+.badge{
+    position: absolute;
+    border-radius: 100%;
+    padding: 7px;
+    background-color: rgb(196, 105, 105);
+    font-size: 8px;
+    left: 52px;
+    top: 4px;
+}
+.profileImg{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 100%;
+    margin-left: 10px;
+    text-align: center;
+    align-self: baseline;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: rgb(196, 105, 105);
+}
+.profileImg img{
+    width: 50px;
+    height: 50px;
+} 
 .box{
     width: 100%;
     height: 90%;
@@ -157,6 +193,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     background-color: whitesmoke;
     overflow: hidden;
     margin: 8px;
+    cursor: pointer;
 }
 .tittle{
     width: 100%;
