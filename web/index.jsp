@@ -1,58 +1,35 @@
-<%@page import="javax.script.ScriptEngineFactory"%>
-<%@page import="javax.script.ScriptEngineFactory"%>
-<%@page import="javax.script.ScriptEngineManager"%>
-<%@page import="javax.script.ScriptEngineManager"%>
-<%@page import="java.util.List"%>
-<%@page import="num.User"%>
-<%@page import="num.User"%>
-<!doctype html>
-<%@ page import="num.DataSQL"%>
+<%-- 
+    Document   : home.jp
+    Created on : Dec 15, 2022, 11:06:16 PM
+    Author     : VothanaCHY
+--%>
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-    <title>Bootstrap Example</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css"/>
-    
-    <jsp:useBean id="bean" class="num.DataSQL" />
-    
-  </head>
-  <body>
-      
-      
-      <% 
-        DataSQL data = new DataSQL();
+<%@page import="java.io.OutputStream"%>
+<%@page import="num.DataSQL"%>
+<%@page import="java.util.List"%>
+<%@page import="num.Fruit"%>
+<%@page import="num.Fruit"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Home PAGE</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+        <title>Bootstrap Example</title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css"/>
+
+        <jsp:useBean id="bean" class="num.DataSQL" />
+        <jsp:useBean id="file" class="file.upload" />
+        <jsp:useBean id="get" class="file.get" />
         
-        //data.TestCallJAVASCRIPT();
-        
-        ScriptEngineManager sem = new ScriptEngineManager();
-        List<ScriptEngineFactory> factories = sem.getEngineFactories();
-        for (ScriptEngineFactory factory : factories)
-            out.println(factory.getEngineName() + " " + factory.getEngineVersion() + " " + factory.getNames());
-        if (factories.isEmpty())
-            out.println("No Script Engines found");
-        
-        List<User> users = data.selectAllUsers();
-        
-        for(User user : users){
-                out.print("<br>");
-             out.print(user.getId());
-             out.print("<br>");
-             out.print(user.getFullName());
-             out.print("<br>");
-             out.print(user.getUsername());
-             out.print("<br>");
-             out.print(user.getPassword());
-        }
-%>
-      
-      
-<!--      <div class="parent">
+    </head>
+    <body>
+        <div class="parent">
           <div class="box_container">
             <div class="header">
                 <div class="menu">
@@ -71,153 +48,72 @@
                 </div>
             </div>
             <div class="box">
-                <div class="view">
-                    <div class="searchBox">
-                        <input type="text">
-                    </div>
-                    <div class="fruitViewer">
-                        <div class="tittleView">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="imageView">
-                             <img src="./images/1/Red Cherry .png" >
-                        </div>
-                        <div class="btnAdd">
-                            <p>ADD TO CART</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="store">
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                                        <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                                        <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                                        <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="tittle">
-                            <span>Mango</span>
-                            <span>$2.0</span>
-                        </div>
-                        <div class="image">
-                            <img src="./WEB-INF/assets/image/Red Cherry .png" >
-                        </div>
-                    </div>
-                </div>
+                
+<!--                Design home here-->
+                
             </div>
           </div>
-      </div>-->
-  </body>
+      </div>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+      <div style="width: 100%; height: 20px; background: red; margin: 100px 0 20px 0"></div>
+      <h2 style="text-align: center; width: 100%">TEST</h2>
+      
+      
+      
+      
+        <% 
+            if(request.getParameter("id") != null){
+                boolean result = file.uploadFile(request);
+                if(result)
+                    out.print("Success upload file");
+                else
+                    out.print("Fail to upload");
+            }
+            
+        %>
+        <form id="form" role="form" action="" method="post" enctype="multipart/form-data">
+            <div class="btn btn-success btn-file">
+                    <i class="fa fa-cloud-upload"></i>
+                     Browse
+                     <input type="file" name="file" id="image" />
+            </div>
+            <button type="submit" value="submit" name='submit'>submit</button>
+        </form>
+        
+        <%
+            String filename = "1 (12).png";
+            String id = "1";
+            if(request.getParameter("id") != null){
+                filename = request.getParameter("file");
+            }
+        %>
+        
+        <img src=" <% out.print(get.getFilePath(filename, id , "home")); %>" width="300" height="300">
+        
+        <script type="text/javascript">
+            $('input[type=file]').change(function () {
+                var $fileName =  $('#image').val(); 
+                var $test = "index.jsp?id=1&file=" + $fileName.substring($fileName.lastIndexOf("\\") + 1, $fileName.length);
+                $('#form').attr("action", $test);
+                //alert($test);
+            });
+        </script>
+    </body>
 </html>

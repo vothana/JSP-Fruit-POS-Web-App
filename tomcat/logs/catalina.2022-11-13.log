@@ -1,0 +1,729 @@
+13-Nov-2022 17:59:56.745 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.79
+13-Nov-2022 17:59:56.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 16 2022 15:36:23 UTC
+13-Nov-2022 17:59:56.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.79.0
+13-Nov-2022 17:59:56.747 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\zulu18.30.11-ca-fx-jdk18.0.1-win_x64
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.1+10
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\xampp\tomcat
+13-Nov-2022 17:59:56.749 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\xampp\tomcat
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\xampp\tomcat\conf\logging.properties
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Nov-2022 17:59:56.750 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\xampp\tomcat
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\xampp\tomcat
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\xampp\tomcat\temp
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [{4}].
+13-Nov-2022 17:59:56.751 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13-Nov-2022 17:59:56.763 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+13-Nov-2022 17:59:56.856 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 17:59:56.874 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 566 ms
+13-Nov-2022 17:59:56.906 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Nov-2022 17:59:56.906 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.79]
+13-Nov-2022 17:59:56.914 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml]
+13-Nov-2022 17:59:57.272 WARNING [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [127] milliseconds.
+13-Nov-2022 17:59:57.287 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml] has finished in [374] ms
+13-Nov-2022 17:59:57.287 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml]
+13-Nov-2022 17:59:57.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml] has finished in [40] ms
+13-Nov-2022 17:59:57.328 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml]
+13-Nov-2022 17:59:58.003 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Nov-2022 17:59:58.039 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml] has finished in [710] ms
+13-Nov-2022 17:59:58.039 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+13-Nov-2022 17:59:58.043 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7ccd4fdc]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 17:59:58.044 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:757)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7ccd4fdc]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		... 9 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 17:59:58.045 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml] has finished in [5] ms
+13-Nov-2022 17:59:58.110 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\docs]
+13-Nov-2022 17:59:58.131 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\docs] has finished in [21] ms
+13-Nov-2022 17:59:58.131 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\examples]
+13-Nov-2022 17:59:58.588 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\examples] has finished in [457] ms
+13-Nov-2022 17:59:58.588 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\host-manager]
+13-Nov-2022 17:59:58.618 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\host-manager] has finished in [30] ms
+13-Nov-2022 17:59:58.619 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\manager]
+13-Nov-2022 17:59:58.650 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\manager] has finished in [31] ms
+13-Nov-2022 17:59:58.650 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\NUM_JSP]
+13-Nov-2022 17:59:58.664 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\NUM_JSP] has finished in [14] ms
+13-Nov-2022 17:59:58.665 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\ROOT]
+13-Nov-2022 17:59:58.683 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\ROOT] has finished in [17] ms
+13-Nov-2022 17:59:58.684 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 17:59:58.734 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1859 ms
+13-Nov-2022 18:00:03.362 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 18:00:03.394 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [31] ms
+13-Nov-2022 18:00:03.396 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shop]] after start() had already been called. The second call will be ignored.
+13-Nov-2022 18:17:24.792 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:17:24.841 INFO [http-nio-8080-exec-5] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:17:32.115 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:17:32.150 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:20:12.523 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:20:12.556 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:24:23.031 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:24:23.068 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:24:27.896 INFO [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:24:27.927 INFO [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:24:53.112 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:24:53.145 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:24:53.204 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:24:53.237 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:38:17.089 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:38:17.124 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:39:16.073 INFO [http-nio-8080-exec-38] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:39:16.106 INFO [http-nio-8080-exec-38] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:39:26.252 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:39:26.283 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:39:34.093 INFO [http-nio-8080-exec-40] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:39:34.123 INFO [http-nio-8080-exec-40] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:39:35.938 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:39:35.966 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:42:10.227 INFO [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:42:10.256 INFO [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:54:00.576 INFO [http-nio-8080-exec-51] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:54:00.612 INFO [http-nio-8080-exec-51] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 18:59:25.119 INFO [http-nio-8080-exec-63] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 18:59:25.151 INFO [http-nio-8080-exec-63] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:07:26.430 INFO [http-nio-8080-exec-70] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:07:26.459 INFO [http-nio-8080-exec-70] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:07:32.419 INFO [http-nio-8080-exec-74] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:07:32.448 INFO [http-nio-8080-exec-74] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:08:07.625 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:08:07.657 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:10:00.143 INFO [http-nio-8080-exec-84] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:10:00.174 INFO [http-nio-8080-exec-84] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:10:32.287 INFO [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:10:32.319 INFO [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:15:32.381 INFO [http-nio-8080-exec-96] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:15:32.414 INFO [http-nio-8080-exec-96] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:21:46.701 INFO [http-nio-8080-exec-105] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:21:46.735 INFO [http-nio-8080-exec-105] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:23:37.269 INFO [http-nio-8080-exec-116] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:23:37.299 INFO [http-nio-8080-exec-116] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:25:07.865 INFO [http-nio-8080-exec-115] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:25:07.893 INFO [http-nio-8080-exec-115] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:25:11.245 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:25:11.276 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:26:29.034 INFO [http-nio-8080-exec-104] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:26:29.064 INFO [http-nio-8080-exec-104] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:26:44.138 INFO [http-nio-8080-exec-107] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:26:44.170 INFO [http-nio-8080-exec-107] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:27:16.496 INFO [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:27:16.524 INFO [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:27:41.831 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:27:41.861 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:27:53.893 INFO [http-nio-8080-exec-120] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:27:53.921 INFO [http-nio-8080-exec-120] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:27:55.011 INFO [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:27:55.039 INFO [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:28:29.777 INFO [http-nio-8080-exec-121] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:28:29.806 INFO [http-nio-8080-exec-121] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:30:03.686 INFO [http-nio-8080-exec-125] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:30:03.714 INFO [http-nio-8080-exec-125] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:30:10.046 INFO [http-nio-8080-exec-129] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:30:10.075 INFO [http-nio-8080-exec-129] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:33:10.639 INFO [http-nio-8080-exec-124] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:33:10.670 INFO [http-nio-8080-exec-124] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:33:25.312 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:33:25.345 INFO [http-nio-8080-exec-118] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:34:54.488 INFO [http-nio-8080-exec-128] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:34:54.520 INFO [http-nio-8080-exec-128] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:35:21.383 INFO [http-nio-8080-exec-128] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:35:21.413 INFO [http-nio-8080-exec-128] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:38:26.714 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:38:26.746 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:38:37.629 INFO [http-nio-8080-exec-146] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:38:37.663 INFO [http-nio-8080-exec-146] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:39:14.326 INFO [http-nio-8080-exec-144] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:39:14.359 INFO [http-nio-8080-exec-144] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:40:38.501 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:40:38.534 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:40:44.112 INFO [http-nio-8080-exec-144] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:40:44.144 INFO [http-nio-8080-exec-144] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:41:18.284 INFO [http-nio-8080-exec-131] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:41:18.313 INFO [http-nio-8080-exec-131] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:43:56.552 INFO [http-nio-8080-exec-156] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:43:56.586 INFO [http-nio-8080-exec-156] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:43:56.790 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:43:56.820 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:44:23.740 INFO [http-nio-8080-exec-162] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:44:23.769 INFO [http-nio-8080-exec-162] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:45:12.907 INFO [http-nio-8080-exec-154] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:45:12.939 INFO [http-nio-8080-exec-154] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:45:23.216 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:45:23.248 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:45:23.374 INFO [http-nio-8080-exec-154] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:45:23.407 INFO [http-nio-8080-exec-154] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:45:34.005 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:45:34.035 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:45:55.273 INFO [http-nio-8080-exec-162] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:45:55.304 INFO [http-nio-8080-exec-162] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:46:20.007 INFO [http-nio-8080-exec-162] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:46:20.037 INFO [http-nio-8080-exec-162] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:47:44.559 INFO [http-nio-8080-exec-182] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:47:44.592 INFO [http-nio-8080-exec-182] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:47:47.194 INFO [http-nio-8080-exec-172] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:47:47.223 INFO [http-nio-8080-exec-172] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:48:20.398 INFO [http-nio-8080-exec-178] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:48:20.430 INFO [http-nio-8080-exec-178] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:48:24.962 INFO [http-nio-8080-exec-185] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:48:24.992 INFO [http-nio-8080-exec-185] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:50:50.173 INFO [http-nio-8080-exec-192] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:50:50.205 INFO [http-nio-8080-exec-192] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:50:52.539 INFO [http-nio-8080-exec-189] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:50:52.569 INFO [http-nio-8080-exec-189] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:51:28.072 SEVERE [http-nio-8080-exec-201] org.apache.jasper.compiler.JDTCompiler$1.findType Failed to load class [java.lang.System]
+	org.eclipse.jdt.internal.compiler.classfmt.ClassFormatException
+		at org.eclipse.jdt.internal.compiler.classfmt.ClassFileReader.<init>(ClassFileReader.java:406)
+		at org.apache.jasper.compiler.JDTCompiler$1.findType(JDTCompiler.java:231)
+		at org.apache.jasper.compiler.JDTCompiler$1.findType(JDTCompiler.java:207)
+		at org.eclipse.jdt.internal.compiler.lookup.LookupEnvironment.askForType(LookupEnvironment.java:174)
+		at org.eclipse.jdt.internal.compiler.lookup.PackageBinding.getType(PackageBinding.java:145)
+		at org.eclipse.jdt.internal.compiler.lookup.Scope.findType(Scope.java:1926)
+		at org.eclipse.jdt.internal.compiler.lookup.Scope.getTypeOrPackage(Scope.java:3254)
+		at org.eclipse.jdt.internal.compiler.lookup.Scope.getBinding(Scope.java:2192)
+		at org.eclipse.jdt.internal.compiler.lookup.BlockScope.getBinding(BlockScope.java:485)
+		at org.eclipse.jdt.internal.compiler.ast.QualifiedNameReference.resolveType(QualifiedNameReference.java:999)
+		at org.eclipse.jdt.internal.compiler.ast.MessageSend.resolveType(MessageSend.java:636)
+		at org.eclipse.jdt.internal.compiler.ast.Expression.resolve(Expression.java:1026)
+		at org.eclipse.jdt.internal.compiler.ast.ForeachStatement.resolve(ForeachStatement.java:576)
+		at org.eclipse.jdt.internal.compiler.ast.Block.resolveUsing(Block.java:130)
+		at org.eclipse.jdt.internal.compiler.ast.TryStatement.resolve(TryStatement.java:1073)
+		at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.resolveStatements(AbstractMethodDeclaration.java:634)
+		at org.eclipse.jdt.internal.compiler.ast.MethodDeclaration.resolveStatements(MethodDeclaration.java:306)
+		at org.eclipse.jdt.internal.compiler.ast.AbstractMethodDeclaration.resolve(AbstractMethodDeclaration.java:544)
+		at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1195)
+		at org.eclipse.jdt.internal.compiler.ast.TypeDeclaration.resolve(TypeDeclaration.java:1308)
+		at org.eclipse.jdt.internal.compiler.ast.CompilationUnitDeclaration.resolve(CompilationUnitDeclaration.java:593)
+		at org.eclipse.jdt.internal.compiler.Compiler.process(Compiler.java:867)
+		at org.eclipse.jdt.internal.compiler.Compiler.processCompiledUnits(Compiler.java:550)
+		at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:462)
+		at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:417)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:556)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:380)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:350)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:334)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:597)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:398)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:383)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:331)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:543)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:698)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:367)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:639)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:882)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1647)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+13-Nov-2022 19:56:17.134 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Nov-2022 19:56:17.134 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 19:56:17.149 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Nov-2022 19:56:17.166 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 19:56:17.180 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 19:56:53.005 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.79
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 16 2022 15:36:23 UTC
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.79.0
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\zulu18.30.11-ca-fx-jdk18.0.1-win_x64
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.1+10
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+13-Nov-2022 19:56:53.007 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\xampp\tomcat
+13-Nov-2022 19:56:53.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\xampp\tomcat
+13-Nov-2022 19:56:53.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Nov-2022 19:56:53.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Nov-2022 19:56:53.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Nov-2022 19:56:53.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Nov-2022 19:56:53.008 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\xampp\tomcat\conf\logging.properties
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\xampp\tomcat
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\xampp\tomcat
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\xampp\tomcat\temp
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [{4}].
+13-Nov-2022 19:56:53.009 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13-Nov-2022 19:56:53.013 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+13-Nov-2022 19:56:53.079 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 19:56:53.096 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 438 ms
+13-Nov-2022 19:56:53.125 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Nov-2022 19:56:53.125 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.79]
+13-Nov-2022 19:56:53.131 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml]
+13-Nov-2022 19:56:53.398 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml] has finished in [267] ms
+13-Nov-2022 19:56:53.398 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml]
+13-Nov-2022 19:56:53.429 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml] has finished in [31] ms
+13-Nov-2022 19:56:53.429 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 19:56:53.478 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [49] ms
+13-Nov-2022 19:56:53.478 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml]
+13-Nov-2022 19:56:54.133 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Nov-2022 19:56:54.158 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml] has finished in [680] ms
+13-Nov-2022 19:56:54.159 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+13-Nov-2022 19:56:54.162 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@66155fca]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 19:56:54.163 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:757)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@66155fca]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		... 9 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 19:56:54.220 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml] has finished in [61] ms
+13-Nov-2022 19:56:54.221 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\docs]
+13-Nov-2022 19:56:54.242 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\docs] has finished in [21] ms
+13-Nov-2022 19:56:54.243 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\examples]
+13-Nov-2022 19:56:54.628 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\examples] has finished in [385] ms
+13-Nov-2022 19:56:54.628 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\host-manager]
+13-Nov-2022 19:56:54.658 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\host-manager] has finished in [29] ms
+13-Nov-2022 19:56:54.658 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\manager]
+13-Nov-2022 19:56:54.685 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\manager] has finished in [27] ms
+13-Nov-2022 19:56:54.685 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\NUM_JSP]
+13-Nov-2022 19:56:54.698 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\NUM_JSP] has finished in [13] ms
+13-Nov-2022 19:56:54.698 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\ROOT]
+13-Nov-2022 19:56:54.714 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\ROOT] has finished in [16] ms
+13-Nov-2022 19:56:54.715 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 19:56:54.759 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1662 ms
+13-Nov-2022 19:57:40.943 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:57:40.987 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:58:00.599 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:58:00.632 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:58:14.594 INFO [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:58:14.632 INFO [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:58:55.432 INFO [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:58:55.467 INFO [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:58:56.934 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:58:56.965 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:59:51.487 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:59:51.523 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:59:58.314 INFO [http-nio-8080-exec-11] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:59:58.349 INFO [http-nio-8080-exec-11] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 19:59:58.419 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 19:59:58.453 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:01:29.383 INFO [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:01:29.419 INFO [http-nio-8080-exec-27] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:01:46.238 INFO [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:01:46.271 INFO [http-nio-8080-exec-30] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:01:49.610 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:01:49.643 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:02:16.244 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:02:16.278 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:02:42.312 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:02:42.344 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:02:45.682 INFO [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:02:45.718 INFO [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:04:06.710 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:04:06.745 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:04:09.214 INFO [http-nio-8080-exec-40] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:04:09.249 INFO [http-nio-8080-exec-40] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:05:53.039 INFO [http-nio-8080-exec-44] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:05:53.072 INFO [http-nio-8080-exec-44] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:09:00.993 INFO [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:09:01.026 INFO [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:09:35.527 INFO [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:09:35.557 INFO [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:09:46.838 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:09:46.869 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:10:08.313 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:10:08.342 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:10:11.441 INFO [http-nio-8080-exec-58] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:10:11.472 INFO [http-nio-8080-exec-58] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:10:20.275 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:10:20.304 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:10:23.335 INFO [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:10:23.366 INFO [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:11:16.003 INFO [http-nio-8080-exec-57] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:11:16.036 INFO [http-nio-8080-exec-57] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:12:00.186 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:12:00.219 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:12:26.116 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:12:26.147 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:13:14.998 INFO [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:13:15.027 INFO [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:13:27.253 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:13:27.284 INFO [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:24:25.248 INFO [http-nio-8080-exec-69] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:24:25.289 INFO [http-nio-8080-exec-69] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:24:57.617 INFO [http-nio-8080-exec-75] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:24:57.647 INFO [http-nio-8080-exec-75] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:25:08.838 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:25:08.868 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:25:30.518 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:25:30.553 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:25:52.951 INFO [http-nio-8080-exec-75] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:25:52.980 INFO [http-nio-8080-exec-75] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:26:17.633 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:26:17.666 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:26:29.961 INFO [http-nio-8080-exec-82] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:26:29.992 INFO [http-nio-8080-exec-82] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:26:51.843 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:26:51.874 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:28:57.197 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:28:57.228 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:29:35.463 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:29:35.494 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:29:45.149 INFO [http-nio-8080-exec-79] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:29:45.180 INFO [http-nio-8080-exec-79] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:32:47.442 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Nov-2022 20:32:47.442 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:32:47.456 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Nov-2022 20:32:47.465 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:32:47.467 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:33:03.725 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.79
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 16 2022 15:36:23 UTC
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.79.0
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\zulu18.30.11-ca-fx-jdk18.0.1-win_x64
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.1+10
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\xampp\tomcat
+13-Nov-2022 20:33:03.729 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\xampp\tomcat
+13-Nov-2022 20:33:03.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Nov-2022 20:33:03.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Nov-2022 20:33:03.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Nov-2022 20:33:03.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Nov-2022 20:33:03.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Nov-2022 20:33:03.730 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\xampp\tomcat\conf\logging.properties
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\xampp\tomcat
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\xampp\tomcat
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\xampp\tomcat\temp
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [{4}].
+13-Nov-2022 20:33:03.731 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13-Nov-2022 20:33:03.735 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+13-Nov-2022 20:33:03.855 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:33:03.872 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 492 ms
+13-Nov-2022 20:33:03.900 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Nov-2022 20:33:03.900 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.79]
+13-Nov-2022 20:33:03.907 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml]
+13-Nov-2022 20:33:04.171 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml] has finished in [263] ms
+13-Nov-2022 20:33:04.171 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml]
+13-Nov-2022 20:33:04.201 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml] has finished in [30] ms
+13-Nov-2022 20:33:04.201 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:33:04.252 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [51] ms
+13-Nov-2022 20:33:04.252 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml]
+13-Nov-2022 20:33:04.770 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Nov-2022 20:33:04.798 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml] has finished in [546] ms
+13-Nov-2022 20:33:04.798 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+13-Nov-2022 20:33:04.803 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7f8b246f]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 20:33:04.804 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:757)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@7f8b246f]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		... 9 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 20:33:04.805 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml] has finished in [7] ms
+13-Nov-2022 20:33:04.868 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\docs]
+13-Nov-2022 20:33:04.892 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\docs] has finished in [24] ms
+13-Nov-2022 20:33:04.893 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\examples]
+13-Nov-2022 20:33:05.168 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\examples] has finished in [276] ms
+13-Nov-2022 20:33:05.169 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\host-manager]
+13-Nov-2022 20:33:05.197 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\host-manager] has finished in [28] ms
+13-Nov-2022 20:33:05.197 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\manager]
+13-Nov-2022 20:33:05.225 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\manager] has finished in [28] ms
+13-Nov-2022 20:33:05.225 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\NUM_JSP]
+13-Nov-2022 20:33:05.239 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\NUM_JSP] has finished in [14] ms
+13-Nov-2022 20:33:05.240 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\ROOT]
+13-Nov-2022 20:33:05.254 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\ROOT] has finished in [14] ms
+13-Nov-2022 20:33:05.256 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:33:05.299 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1425 ms
+13-Nov-2022 20:33:52.634 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:33:52.679 INFO [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:33:53.894 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:33:53.928 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:35:49.601 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:35:49.636 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:35:51.531 INFO [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:35:51.564 INFO [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:36:10.827 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Nov-2022 20:36:10.827 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:36:10.841 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Nov-2022 20:36:10.856 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:36:10.870 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:36:14.206 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/8.5.79
+13-Nov-2022 20:36:14.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          May 16 2022 15:36:23 UTC
+13-Nov-2022 20:36:14.207 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 8.5.79.0
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\zulu18.30.11-ca-fx-jdk18.0.1-win_x64
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18.0.1+10
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Azul Systems, Inc.
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\xampp\tomcat
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\xampp\tomcat
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+13-Nov-2022 20:36:14.208 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\xampp\tomcat\conf\logging.properties
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_shmem,address=tomcat_shared_memory_id,server=y,suspend=n
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\xampp\tomcat
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\xampp\tomcat
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\xampp\tomcat\temp
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.33] using APR version [1.7.0].
+13-Nov-2022 20:36:14.209 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [{4}].
+13-Nov-2022 20:36:14.253 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+13-Nov-2022 20:36:14.257 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1o  3 May 2022]
+13-Nov-2022 20:36:14.288 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:36:14.308 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 405 ms
+13-Nov-2022 20:36:14.341 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+13-Nov-2022 20:36:14.341 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/8.5.79]
+13-Nov-2022 20:36:14.349 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml]
+13-Nov-2022 20:36:14.639 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\First.xml] has finished in [291] ms
+13-Nov-2022 20:36:14.639 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml]
+13-Nov-2022 20:36:14.671 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\num.xml] has finished in [32] ms
+13-Nov-2022 20:36:14.672 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:36:14.725 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [53] ms
+13-Nov-2022 20:36:14.725 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml]
+13-Nov-2022 20:36:15.287 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+13-Nov-2022 20:36:15.313 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\UserMgSystem.xml] has finished in [588] ms
+13-Nov-2022 20:36:15.313 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+13-Nov-2022 20:36:15.317 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+	org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@5791a7f0]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 20:36:15.317 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:757)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:727)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:695)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:673)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1881)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:833)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@5791a7f0]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4880)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5018)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:753)
+		... 9 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\ROG\Desktop\WebApplication1\build\web] is not valid
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:748)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:705)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 13 more
+13-Nov-2022 20:36:15.369 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\WebApplication1.xml] has finished in [55] ms
+13-Nov-2022 20:36:15.370 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\docs]
+13-Nov-2022 20:36:15.388 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\docs] has finished in [18] ms
+13-Nov-2022 20:36:15.389 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\examples]
+13-Nov-2022 20:36:15.678 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\examples] has finished in [289] ms
+13-Nov-2022 20:36:15.678 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\host-manager]
+13-Nov-2022 20:36:15.708 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\host-manager] has finished in [30] ms
+13-Nov-2022 20:36:15.708 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\manager]
+13-Nov-2022 20:36:15.735 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\manager] has finished in [27] ms
+13-Nov-2022 20:36:15.735 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\NUM_JSP]
+13-Nov-2022 20:36:15.749 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\NUM_JSP] has finished in [14] ms
+13-Nov-2022 20:36:15.749 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\xampp\tomcat\webapps\ROOT]
+13-Nov-2022 20:36:15.767 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\xampp\tomcat\webapps\ROOT] has finished in [17] ms
+13-Nov-2022 20:36:15.768 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:36:15.815 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1504 ms
+13-Nov-2022 20:36:16.821 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/shop]
+13-Nov-2022 20:36:16.841 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:36:16.876 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [35] ms
+13-Nov-2022 20:36:16.879 INFO [http-nio-8080-exec-7] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shop]] after start() had already been called. The second call will be ignored.
+13-Nov-2022 20:38:12.235 INFO [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:38:12.272 INFO [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:39:39.593 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:39:39.627 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:39:41.468 INFO [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] has started
+13-Nov-2022 20:39:41.501 INFO [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/shop] is completed
+13-Nov-2022 20:39:55.707 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/shop]
+13-Nov-2022 20:39:55.717 INFO [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:39:55.755 INFO [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [38] ms
+13-Nov-2022 20:39:55.757 INFO [http-nio-8080-exec-13] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shop]] after start() had already been called. The second call will be ignored.
+13-Nov-2022 20:40:25.413 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/shop]
+13-Nov-2022 20:40:25.423 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:40:25.457 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [34] ms
+13-Nov-2022 20:40:25.460 INFO [http-nio-8080-exec-25] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shop]] after start() had already been called. The second call will be ignored.
+13-Nov-2022 20:40:29.676 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/shop]
+13-Nov-2022 20:40:29.685 INFO [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:40:29.717 INFO [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [32] ms
+13-Nov-2022 20:40:29.719 INFO [http-nio-8080-exec-21] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shop]] after start() had already been called. The second call will be ignored.
+13-Nov-2022 20:40:34.973 INFO [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/shop]
+13-Nov-2022 20:40:40.039 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml]
+13-Nov-2022 20:40:40.074 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\xampp\tomcat\conf\Catalina\localhost\shop.xml] has finished in [35] ms
+13-Nov-2022 20:40:40.077 INFO [http-nio-8080-exec-15] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/shop]] after start() had already been called. The second call will be ignored.
+13-Nov-2022 20:40:53.859 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+13-Nov-2022 20:40:53.859 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:40:53.874 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+13-Nov-2022 20:40:53.888 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+13-Nov-2022 20:40:53.911 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

@@ -4,6 +4,7 @@
  */
 package num;
 
+import java.sql.Blob;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,11 +19,13 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class Fruit {
+    private int id;
     private String Name;
-    private String Price;
+    private double Price;
+    private double Discount;
     private String Description;
-    private String Discount;
     private String DateIn;
-    private String Day;
-    private String Image;
+    private int Day;
+    private Blob Image;
+
 }

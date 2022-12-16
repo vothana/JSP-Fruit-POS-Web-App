@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -56,21 +57,33 @@ public class DataSQL {
 		return users;
 	}
         
-        
-        
-        public void TestCallJAVASCRIPT() throws IOException, ScriptException, NoSuchMethodException{
-            ScriptEngineManager manager = new ScriptEngineManager();
-            ScriptEngine engine = manager.getEngineByName("JavaScript");
-            // read script file
-            engine.eval(Files.newBufferedReader(Paths.get("C:\\Users\\ROG\\Desktop\\Fruit\\web\\main.js"), StandardCharsets.UTF_8));
+        String query = "SELECT * FROM Fruit";
+        public List<Fruit> selectAllFruit(){
+            List<Fruit> fruits = new ArrayList<>();
+            try (Connection connection = database.connect();
+			// Step 2:Create a statement using connection object
+			PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+			System.out.println(preparedStatement);
+			// Step 3: Execute the query or update query
+			ResultSet rs = preparedStatement.executeQuery();
 
-            Invocable inv = (Invocable) engine;
-            // call function from script file
-            inv.invokeFunction("test");
+			// Step 4: Process the ResultSet object.
+			while (rs.next()) {
+                            int id = rs.getInt("fruitID");
+                            String Name = rs.getString("Name");
+                            double Price = rs.getDouble("Price");
+                            double Discount = rs.getDouble("Discount");
+                            String Description = rs.getString("Discription");
+                            String DateIn = rs.getString("DateIn");
+                            int Day = rs.getInt("Day");
+                            Blob Image = rs.getBlob("Image");
+                            fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
+			}
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return fruits;
         }
-        
-        
-        
         
         
         private void printSQLException(SQLException ex) {
