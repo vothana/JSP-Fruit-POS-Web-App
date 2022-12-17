@@ -392,6 +392,7 @@
 17-Dec-2022 21:26:22.293 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/num] has started
 17-Dec-2022 21:26:22.603 INFO [http-nio-8080-exec-33] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 17-Dec-2022 21:26:22.616 INFO [http-nio-8080-exec-33] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/num] is completed
+<<<<<<< HEAD
 17-Dec-2022 21:44:37.970 INFO [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/num] has started
 17-Dec-2022 21:44:38.279 INFO [http-nio-8080-exec-48] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 17-Dec-2022 21:44:38.291 INFO [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/num] is completed
@@ -408,3 +409,5 @@
  java.base@18.0.1/java.lang.Thread.run(Thread.java:833)
 17-Dec-2022 22:03:16.601 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
 17-Dec-2022 22:03:16.620 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+=======
+>>>>>>> ea8d1d33fd80d676ae7922c13fc6197acf52bbcb

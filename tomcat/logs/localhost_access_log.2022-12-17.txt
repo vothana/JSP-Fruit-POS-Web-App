@@ -2608,6 +2608,7 @@
 127.0.0.1 - vothana [17/Dec/2022:21:27:22 +0700] "GET /manager/text/list HTTP/1.1" 200 673
 127.0.0.1 - - [17/Dec/2022:21:27:22 +0700] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
 127.0.0.1 - vothana [17/Dec/2022:21:27:22 +0700] "GET /manager/text/ HTTP/1.1" 200 39
+<<<<<<< HEAD
 127.0.0.1 - - [17/Dec/2022:21:39:15 +0700] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
 127.0.0.1 - vothana [17/Dec/2022:21:39:15 +0700] "GET /manager/text/ HTTP/1.1" 200 39
 127.0.0.1 - - [17/Dec/2022:21:39:15 +0700] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
@@ -2690,3 +2691,5 @@
 127.0.0.1 - vothana [17/Dec/2022:22:03:16 +0700] "GET /manager/text/ HTTP/1.1" 200 39
 127.0.0.1 - - [17/Dec/2022:22:03:16 +0700] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
 127.0.0.1 - vothana [17/Dec/2022:22:03:16 +0700] "GET /manager/text/ HTTP/1.1" 200 39
+=======
+>>>>>>> ea8d1d33fd80d676ae7922c13fc6197acf52bbcb

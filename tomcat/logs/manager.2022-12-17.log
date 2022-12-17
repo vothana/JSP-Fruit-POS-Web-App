@@ -292,6 +292,7 @@
 17-Dec-2022 21:26:22.289 INFO [http-nio-8080-exec-22] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
 17-Dec-2022 21:26:22.293 INFO [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/num'
 17-Dec-2022 21:27:22.608 INFO [http-nio-8080-exec-40] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+<<<<<<< HEAD
 17-Dec-2022 21:39:15.233 INFO [http-nio-8080-exec-44] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
 17-Dec-2022 21:44:37.956 INFO [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
 17-Dec-2022 21:44:37.957 INFO [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
@@ -299,3 +300,5 @@
 17-Dec-2022 22:02:58.988 INFO [http-nio-8080-exec-56] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
 17-Dec-2022 22:03:04.776 INFO [http-nio-8080-exec-53] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
 17-Dec-2022 22:03:11.378 INFO [http-nio-8080-exec-59] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+=======
+>>>>>>> ea8d1d33fd80d676ae7922c13fc6197acf52bbcb
