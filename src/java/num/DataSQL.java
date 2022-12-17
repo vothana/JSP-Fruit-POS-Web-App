@@ -28,77 +28,84 @@ public class DataSQL {
     
     private final Database database = new Database();
     
-    private static final String SELECT_ALL_USERS = "select * from users";
-    
+        String query;
+
     	public List<User> selectAllUsers() {
-
-		// using try-with-resources to avoid closing resources (boiler plate code)
-		List<User> users = new ArrayList<>();
-		// Step 1: Establishing a Connection
-		try (Connection connection = database.connect();
-
-			// Step 2:Create a statement using connection object
-			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
-			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
-			ResultSet rs = preparedStatement.executeQuery();
-
-			// Step 4: Process the ResultSet object.
-			while (rs.next()) {
-                            int id = rs.getInt("userid");
-                            String fullname = rs.getString("fullname");
-                            String username = rs.getString("username");
-                            String password = rs.getString("password");
-                            users.add(new User(id, fullname, username, password));
-			}
-		} catch (SQLException e) {
-			printSQLException(e);
-		}
-		return users;
+            query = "SELECT * FROM USERS";
+            List<User> users = new ArrayList<>();
+            try (Connection connection = database.connect();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);) {
+                System.out.println(preparedStatement);
+                ResultSet rs = preparedStatement.executeQuery();
+                while (rs.next()) {
+                    int id = rs.getInt("userid");
+                    String fullname = rs.getString("fullname");
+                    String username = rs.getString("username");
+                    String password = rs.getString("password");
+                    users.add(new User(id, fullname, username, password));
+                }
+            } catch (SQLException e) {
+                printSQLException(e);
+            }
+            return users;
 	}
         
-        String query = "SELECT * FROM Fruit";
         public List<Fruit> selectAllFruit(){
+            query = "SELECT * FROM USERS";
             List<Fruit> fruits = new ArrayList<>();
             try (Connection connection = database.connect();
-			// Step 2:Create a statement using connection object
-			PreparedStatement preparedStatement = connection.prepareStatement(query)) {
-			System.out.println(preparedStatement);
-			// Step 3: Execute the query or update query
-			ResultSet rs = preparedStatement.executeQuery();
-
-			// Step 4: Process the ResultSet object.
-			while (rs.next()) {
-                            int id = rs.getInt("fruitID");
-                            String Name = rs.getString("Name");
-                            double Price = rs.getDouble("Price");
-                            double Discount = rs.getDouble("Discount");
-                            String Description = rs.getString("Discription");
-                            String DateIn = rs.getString("DateIn");
-                            int Day = rs.getInt("Day");
-                            Blob Image = rs.getBlob("Image");
-                            fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
-			}
-		} catch (SQLException e) {
-			printSQLException(e);
-		}
-		return fruits;
+                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                System.out.println(preparedStatement);
+                ResultSet rs = preparedStatement.executeQuery();
+                while (rs.next()) {
+                    int id = rs.getInt("fruitID");
+                    String Name = rs.getString("Name");
+                    double Price = rs.getDouble("Price");
+                    double Discount = rs.getDouble("Discount");
+                    String Description = rs.getString("Discription");
+                    String DateIn = rs.getString("DateIn");
+                    int Day = rs.getInt("Day");
+                    Blob Image = rs.getBlob("Image");
+                    fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
+                }
+            } catch (SQLException e) {
+                    printSQLException(e);
+            }
+            return fruits;
         }
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         private void printSQLException(SQLException ex) {
-		for (Throwable e : ex) {
-			if (e instanceof SQLException) {
-				e.printStackTrace(System.err);
-				System.err.println("SQLState: " + ((SQLException) e).getSQLState());
-				System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
-				System.err.println("Message: " + e.getMessage());
-				Throwable t = ex.getCause();
-				while (t != null) {
-					System.out.println("Cause: " + t);
-					t = t.getCause();
-				}
-			}
-		}
+            for (Throwable e : ex) {
+                if (e instanceof SQLException) {
+                    e.printStackTrace(System.err);
+                    System.err.println("SQLState: " + ((SQLException) e).getSQLState());
+                    System.err.println("Error Code: " + ((SQLException) e).getErrorCode());
+                    System.err.println("Message: " + e.getMessage());
+                    Throwable t = ex.getCause();
+                    while (t != null) {
+                        System.out.println("Cause: " + t);
+                        t = t.getCause();
+                    }
+                }
+            }
 	}
 }
