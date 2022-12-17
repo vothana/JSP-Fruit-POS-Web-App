@@ -17,53 +17,27 @@
     <title>Bootstrap Example</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./css/store.css"/>
     
     <jsp:useBean id="bean" class="num.DataSQL" />
-    
     <jsp:useBean id="get" class="file.get" />
     
   </head>
   <body>
-      
-      <%
-            String filename = "1 (12).png";
-            String id = "1";
-            if(request.getParameter("id") != null){
-                filename = request.getParameter("file");
-                out.print(filename);
-            }
-        %>
-        
-        <img src=" <% out.print(get.getFilePath(filename, id , "user")); %>" width="300" height="300">
-      
-      
-      <% 
-        DataSQL data = new DataSQL();
-        List<User> users = data.selectAllUsers();
-        for(User user : users){
-                out.print("<br>");
-             out.print(user.getId());
-             out.print("<br>");
-             out.print(user.getFullName());
-             out.print("<br>");
-             out.print(user.getUsername());
-             out.print("<br>");
-             out.print(user.getPassword());
-        }
-%>
-      
-      
-<!--      <div class="parent">
+     <div class="parent">
           <div class="box_container">
             <div class="header">
                 <div class="menu">
-                    <div class="link">Home</div>
-                    <div class="link">Store</div>
-                    <div class="link">
+                    <a class="link" href="index.jsp">
+                        Home
+                    </a>
+                    <a class="link" href="store.jsp">
+                        Store
+                    </a>
+                    <a class="link" href="cart.jsp">
                         <p class="badge">2</p>
                         <i class="fa-solid fa-cart-shopping"></i>
-                    </div>
+                    </a>
                 </div>
                 <div class="profile">
                     <div class="link" style="background: none">Omega 3</div>
@@ -220,6 +194,34 @@
                 </div>
             </div>
           </div>
-      </div>-->
+      </div>
+      
+      
+            <%
+            String filename = "1 (12).png";
+            String id = "1";
+            if(request.getParameter("id") != null){
+                filename = request.getParameter("file");
+                out.print(filename);
+            }
+        %>
+        
+        <img src=" <% out.print(get.getFilePath(filename, id , "user")); %>" width="300" height="300">
+      
+      
+      <% 
+        DataSQL data = new DataSQL();
+        List<User> users = data.selectAllUsers();
+        for(User user : users){
+                out.print("<br>");
+             out.print(user.getId());
+             out.print("<br>");
+             out.print(user.getFullName());
+             out.print("<br>");
+             out.print(user.getUsername());
+             out.print("<br>");
+             out.print(user.getPassword());
+        }
+%>
   </body>
 </html>
