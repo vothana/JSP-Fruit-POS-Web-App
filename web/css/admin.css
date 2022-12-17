@@ -102,9 +102,6 @@ a{
     height: 90%;
     border-radius: 20px;
     background-color: #DAF1E7;
-    display: flex;
-    justify-content: space-evenly; 
-    align-items: center;
     padding: 20px;
 }
 
