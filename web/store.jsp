@@ -205,9 +205,6 @@
                 out.print(filename);
             }
         %>
-        
-        <img src=" <% out.print(get.getFilePath(filename, id , "user")); %>" width="300" height="300">
-      
       
       <% 
         DataSQL data = new DataSQL();
