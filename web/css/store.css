@@ -11,6 +11,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 *{
     font-family: 'Poppins', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 
 .parent{
     height: 100vh;
