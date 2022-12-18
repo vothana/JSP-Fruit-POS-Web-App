@@ -4,22 +4,13 @@
  */
 package num;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.sql.Blob;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import javax.script.Invocable;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-
 /**
  *
  * @author VothanaCHY
@@ -44,6 +35,7 @@ public class DataSQL {
                     String password = rs.getString("password");
                     users.add(new User(id, fullname, username, password));
                 }
+                database.disconnect();
             } catch (SQLException e) {
                 printSQLException(e);
             }
@@ -68,6 +60,33 @@ public class DataSQL {
                     String Image = rs.getString("Image");
                     fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
                 }
+                database.disconnect();
+            } catch (SQLException e) {
+                    printSQLException(e);
+            }
+            return fruits;
+        }
+        
+        public List<Fruit> searchAllFruit(String search){
+            query = "SELECT * FROM `FRUIT` WHERE NAME LIKE '%" + search +"%' ;";
+            System.out.print(query);
+            List<Fruit> fruits = new ArrayList<>();
+            try (Connection connection = database.connect();
+                PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+                System.out.println(preparedStatement);
+                ResultSet rs = preparedStatement.executeQuery();
+                while (rs.next()) {
+                    int id = rs.getInt("fruitID");
+                    String Name = rs.getString("Name");
+                    double Price = rs.getDouble("Price");
+                    double Discount = rs.getDouble("Discount");
+                    String Description = rs.getString("Discription");
+                    String DateIn = rs.getString("DateIn");
+                    int Day = rs.getInt("Day");
+                    String Image = rs.getString("Image");
+                    fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
+                }
+                database.disconnect();
             } catch (SQLException e) {
                     printSQLException(e);
             }

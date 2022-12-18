@@ -8,8 +8,24 @@
 
 
 <%
+    Cookie[] cookies = request.getCookies();
+    String FullName = "User";
+    if(cookies != null){
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("fullName")) {
+                FullName = "@" + cookie.getValue();
+                break;
+            }
+        }
+    }
+        
     DataSQL data = new DataSQL();
     List<Fruit> fruits = data.selectAllFruit();
+    List<Fruit> searchFruits = null;
+    
+    if(request.getParameter("search") != null && request.getParameter("search") != ""){
+        searchFruits = data.searchAllFruit(request.getParameter("search"));
+    }
 %>
 
 
@@ -27,7 +43,7 @@
       <script type="text/javascript">
         function pushID(id){
             window.location.replace("store.jsp?id=" + id);
-        }
+        };
         
         function addToCart(id){
             $username = $.trim($('#username').text());
@@ -36,7 +52,15 @@
             }else{
                 window.location.replace("store.jsp?item=" + id);
             }
-        }
+        };
+        
+        function goLogin(){
+            $username = $.trim($('#username').text());
+            if($username === "User"){
+                window.location.replace("login.jsp");
+            }
+        };
+        
       </script>
   </head>
   <body>
@@ -56,10 +80,10 @@
                     </a>
                 </div>
                 <div class="profile">
-                    <a class="link" href="store.jsp" style="background: none" id="username">
-                        <p>User</p>
+                    <a class="link" onclick="goLogin()" style="background: none" id="username">
+                        <p><%= FullName %></p>
                     </a>
-                    <div class="profileImg">
+                    <div class="profileImg" onclick="goLogin()">
                         <img src="./images/NUM Logo.png" >
                     </div>
                 </div>
@@ -67,7 +91,7 @@
             <div class="box">
                 <div class="view">
                     <div class="searchBox">
-                        <input type="text">
+                        <input type="text" id="search" placeholder="Search..." />
                     </div>
                     <div class="fruitViewer">
                         <%
@@ -78,6 +102,7 @@
                             String desc = "";
                             String dateIn = "";
                             String expiredDay = "";
+                            
                             if(request.getParameter("id") != null){
                                 for(Fruit fruit : fruits){
                                     if(fruit.getId() == Integer.parseInt(request.getParameter("id"))){
@@ -120,7 +145,8 @@
                 </div>
                 <div class="store">
                     <% 
-                        for(Fruit fruit : fruits){
+                        if(searchFruits == null){
+                            for(Fruit fruit : fruits){
                              out.print("<div class='item' onclick=' pushID(\"" + fruit.getId() + "\") ' >");
                                 out.print("<div class='tittle'>");
                                     out.print("<span>" + fruit.getName() + "</span>");
@@ -130,12 +156,39 @@
                                     out.print("<img src='" + get.getFilePath(fruit.getImage(), String.valueOf(fruit.getId())) +"' />");
                                 out.print("</div>");
                              out.print("</div>");
+                            }
+                        }else{
+                            if(searchFruits.size() > 0){
+                                for(Fruit fruit : searchFruits){
+                                 out.print("<div class='item' onclick=' pushID(\"" + fruit.getId() + "\") ' >");
+                                    out.print("<div class='tittle'>");
+                                        out.print("<span>" + fruit.getName() + "</span>");
+                                        out.print("<span>$" + fruit.getPrice() + "</span>");
+                                    out.print("</div>");
+                                    out.print("<div class='image'>");
+                                        out.print("<img src='" + get.getFilePath(fruit.getImage(), String.valueOf(fruit.getId())) +"' />");
+                                    out.print("</div>");
+                                 out.print("</div>");
+                                }
+                            }else{
+                                out.print("<p style='text-align: center; width: 100%;'>No Fruits</p>");
+                            }
                         }
                     %>
                 </div>
             </div>
           </div>
       </div>
+
+        <script>
+            var input = document.getElementById("search");
+            input.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+              event.preventDefault();
+              window.location.replace("store.jsp?search=" + input.value);
+            }
+            });
+        </script>
   </body>
 
 </html>
