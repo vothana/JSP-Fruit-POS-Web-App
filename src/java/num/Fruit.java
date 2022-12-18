@@ -26,6 +26,6 @@ public class Fruit {
     private String Description;
     private String DateIn;
     private int Day;
-    private Blob Image;
+    private String Image;
 
 }

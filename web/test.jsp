@@ -28,49 +28,7 @@
         
     </head>
     <body>
-        <div class="parent">
-          <div class="box_container">
-            <div class="header">
-                <div class="menu">
-                    <a class="link" href="index.jsp">
-                        Home
-                    </a>
-                    <a class="link" href="store.jsp">
-                        Store
-                    </a>
-                </div>
-                <div class="profile">
-                    <div class="link" style="background: none">Omega 3</div>
-                    <div class="profileImg">
-                        <img src="./images/1/Red Cherry .png" >
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                
-<!--                Design home here-->
-                
-            </div>
-          </div>
-      </div>
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       
-        
       <div style="width: 100%; height: 20px; background: red; margin: 100px 0 20px 0"></div>
       <h2 style="text-align: center; width: 100%">TEST</h2>
       
