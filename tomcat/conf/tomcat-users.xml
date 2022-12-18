@@ -52,4 +52,5 @@
 -->
     <role rolename="manager-gui"/>
     <user password="vothana" roles="manager-gui,admin,manager-script" username="vothana"/>
+    <user password="123" roles="manager-script,admin" username="rath"/>
 </tomcat-users>
