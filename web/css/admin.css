@@ -128,3 +128,132 @@ a{
   border: 6px solid transparent;
   background-clip: content-box;
 }
+
+.container{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 100%;
+    height: 90%;
+    border-radius: 20px;
+    display: flex;
+    background-color: #DAF1E7;
+
+}
+.formControl{
+    width: 700px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #7F8826;
+    border-radius: 10px;
+    
+}
+.list{
+    width: 100%;
+    height: 100%;
+    
+}
+.form{
+    width: 80%;
+}
+.inputField{
+    margin: 10px;
+}
+.inputField .label{
+    display: block;
+}
+.inputField input{
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #565657;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #565657;
+}
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #565657;
+}
+
+.list{
+    background-color: #DAF1E7;
+    /* padding:30px; */
+    text-align: center;
+}
+.list h3{
+
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: black;
+
+}
+.inputField label{
+    color: white;
+}
+
+
+
+img{
+    border-radius: 50px;
+}
+.table-dark{
+    vertical-align: middle;
+}
+.NameCreate {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button-submit{
+    background-color: #DAF1E7;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    
+}
+.button-submit:hover{
+    color: #DAF1E7;
+
+    background-color: black;
+}
