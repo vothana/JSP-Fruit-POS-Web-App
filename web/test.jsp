@@ -4,6 +4,7 @@
     Author     : VothanaCHY
 --%>
 
+<%@page import="num.Order"%>
 <%@page import="java.io.OutputStream"%>
 <%@page import="num.DataSQL"%>
 <%@page import="java.util.List"%>
@@ -27,13 +28,36 @@
         <jsp:useBean id="get" class="file.get" />
         
     </head>
-    <body>
-
+    <body>      
+      <%
+          Cookie[] cookies = request.getCookies();
+          String userID = "0";
+            if(cookies != null){
+                for (Cookie cookie : cookies) {
+                    if (cookie.getName().equals("id")) {
+                        userID = cookie.getValue();
+                        break;
+                    }
+                }
+            }
+          
+          DataSQL data = new DataSQL();
+          List<Order> orders = data.getActiveOrder(userID);
+            if(!orders.isEmpty()){
+                for(Order order : orders){
+                  out.print("<br>" + order.getOrderID());
+                  out.print("<br>" + order.getFruitId());
+                  out.print("<br>" + order.getImage());
+                  out.print("<br>" + order.getName());
+                }
+          }else{
+            out.print("<br>" + "No Order for this user");
+          }
+      %>
+      
+      
       <div style="width: 100%; height: 20px; background: red; margin: 100px 0 20px 0"></div>
       <h2 style="text-align: center; width: 100%">TEST</h2>
-      
-      
-      
       
         <% 
             if(request.getParameter("id") != null){
@@ -43,8 +67,8 @@
                 else
                     out.print("Fail to upload");
             }
-            
         %>
+        
         <form id="form" role="form" action="" method="post" enctype="multipart/form-data">
             <div class="btn btn-success btn-file">
                     <i class="fa fa-cloud-upload"></i>

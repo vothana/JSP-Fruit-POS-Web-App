@@ -43,8 +43,12 @@
                         if(user.getPassword().equalsIgnoreCase(request.getParameter("password"))){
                         
                             Cookie Name = new Cookie("fullName", user.getUsername().toString());
-                            Name.setMaxAge(60*60*24); 
+                            Cookie id = new Cookie("id", String.valueOf(user.getId()));
+                            Name.setMaxAge(60*60*24);
+                            id.setMaxAge(60*60*24);
+                            
                             response.addCookie(Name);
+                            response.addCookie(id);
 
                             isValid = true;
                             break;
