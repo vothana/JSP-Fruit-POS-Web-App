@@ -51,7 +51,7 @@ public class DataSQL {
 	}
         
         public List<Fruit> selectAllFruit(){
-            query = "SELECT * FROM USERS";
+            query = "SELECT * FROM FRUIT";
             List<Fruit> fruits = new ArrayList<>();
             try (Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -65,7 +65,7 @@ public class DataSQL {
                     String Description = rs.getString("Discription");
                     String DateIn = rs.getString("DateIn");
                     int Day = rs.getInt("Day");
-                    Blob Image = rs.getBlob("Image");
+                    String Image = rs.getString("Image");
                     fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
                 }
             } catch (SQLException e) {
