@@ -25,7 +25,8 @@ public class Database {
             try {
                 Class.forName(DATABASE_DRIVER);
                 connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
-            } catch (ClassNotFoundException | SQLException ignored) {
+            } catch (ClassNotFoundException | SQLException ex) {
+                System.out.print(ex.getMessage());
             }
         }
         return connection;

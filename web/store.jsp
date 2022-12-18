@@ -117,13 +117,15 @@
                                     }
                                 }
                             }else{
-                                id = String.valueOf(fruits.get(0).getId());
-                                filename = fruits.get(0).getImage();
-                                name = fruits.get(0).getName();
-                                price = String.valueOf(fruits.get(0).getPrice());
-                                desc = fruits.get(0).getDescription();
-                                dateIn = fruits.get(0).getDateIn();
-                                expiredDay = String.valueOf(fruits.get(0).getDay());
+                                if(fruits.size() > 0){
+                                    id = String.valueOf(fruits.get(0).getId());
+                                    filename = fruits.get(0).getImage();
+                                    name = fruits.get(0).getName();
+                                    price = String.valueOf(fruits.get(0).getPrice());
+                                    desc = fruits.get(0).getDescription();
+                                    dateIn = fruits.get(0).getDateIn();
+                                    expiredDay = String.valueOf(fruits.get(0).getDay());
+                                }
                             }
                         %>
                         <div class="tittleView">
