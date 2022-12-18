@@ -26,6 +26,10 @@
     if(request.getParameter("search") != null && request.getParameter("search") != ""){
         searchFruits = data.searchAllFruit(request.getParameter("search"));
     }
+    
+    if(request.getParameter("item") != null && request.getParameter("item") != ""){
+        
+    }
 %>
 
 
@@ -140,7 +144,7 @@
                             <p style="font-size: 12px">&emsp;<%= desc %></p>
                             <strong style="margin-top: 10px">Can keep: <span style="color: red"><%= expiredDay %> Days more</span></strong>
                         </div>
-                        <div class="btnAdd" onclick="addToCart(id)">
+                        <div class="btnAdd" onclick="addToCart( <%= id %> )">
                             <p>ADD TO CART</p>
                         </div>
                     </div>
