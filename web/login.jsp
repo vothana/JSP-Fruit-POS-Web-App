@@ -21,6 +21,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="./css/login.css"/>
         <jsp:useBean id="bean" class="num.DataSQL" />
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                if ($("#success").length) {
+                    window.location.replace("store.jsp");
+                }
+            });
+        </script>
     </head>
     <body>
         
@@ -29,14 +37,15 @@
             if(request.getParameter("username") != "" && request.getParameter("username") != null){
                 DataSQL data = new DataSQL();
                 List<User> users = data.selectAllUsers();
-                
-                out.print(request.getParameter("username").toString());
-                
+
                 for(User user : users){
-                    if(request.getParameter("username").toString() == "vothana"){
-                        out.print("ssddddddd");
-                        if(user.getPassword() == request.getParameter("passwpord")){
-                        out.print("sssss");
+                    if(request.getParameter("username").equalsIgnoreCase(user.getUsername())){
+                        if(user.getPassword().equalsIgnoreCase(request.getParameter("password"))){
+                        
+                            Cookie Name = new Cookie("fullName", user.getUsername().toString());
+                            Name.setMaxAge(60*60*24); 
+                            response.addCookie(Name);
+
                             isValid = true;
                             break;
                         }
@@ -57,7 +66,7 @@
                   <img src="./images/NUM Logo.png" id="icon" alt="User Icon" width="100" height="100"/>
               </div>
               <br><!-- comment -->
-              <form action="login.jsp" method="get">
+              <form action="login.jsp" method="post">
                 <input type="text" id="login" class="fadeIn second" name="username" placeholder="username">
                 <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
                 <% 
@@ -65,12 +74,13 @@
                         if(!isValid){
                             out.print(" <p style='color: red'>Invalid credential</p>");
                         }else{
-                            out.print("sss");
+                            out.print("<p id='success'>success</p>");
                         }
                     }
                 %>
                 <input type="submit" class="fadeIn fourth" value="Log In">
               </form>
+              <a href="/num">Home</a>
             </div>
           </div>
     </body>
