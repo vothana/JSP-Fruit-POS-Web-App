@@ -26,7 +26,8 @@ public class Database {
                 Class.forName(DATABASE_DRIVER);
                 connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
             } catch (ClassNotFoundException | SQLException ex) {
-                System.out.print(ex.getMessage());
+                System.out.print("==================Cannot connect=============== \n" 
+                        + ex.getMessage());
             }
         }
         return connection;
@@ -38,7 +39,9 @@ public class Database {
             try {
                 connection.close();
                 connection = null;
-            } catch (SQLException ignored) {
+            } catch (SQLException ex) {
+                System.out.print("==================Cannot Close=============== \n" 
+                        + ex.getMessage());
             }
         }
     }
