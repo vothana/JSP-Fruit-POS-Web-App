@@ -194,6 +194,7 @@
               window.location.replace("store.jsp?search=" + input.value);
             }
             });
+            
         </script>
   </body>
 
