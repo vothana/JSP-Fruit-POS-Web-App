@@ -41,7 +41,9 @@ public class DataSQL {
             
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 ResultSet rs = preparedStatement.executeQuery();
                 while (rs.next()) {
                     int id = rs.getInt("userid");
@@ -64,18 +66,19 @@ public class DataSQL {
             
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 ResultSet rs = preparedStatement.executeQuery();
                 while (rs.next()) {
                     int id = rs.getInt("fruitID");
                     String Name = rs.getString("Name");
                     double Price = rs.getDouble("Price");
-                    double Discount = rs.getDouble("Discount");
                     String Description = rs.getString("Discription");
                     String DateIn = rs.getString("DateIn");
                     int Day = rs.getInt("Day");
                     String Image = rs.getString("Image");
-                    fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
+                    fruits.add(new Fruit(id, Name, Price, Description, DateIn, Day, Image));
                 } 
             } catch (SQLException e) {
                     printSQLException(e);
@@ -90,18 +93,19 @@ public class DataSQL {
             List<Fruit> fruits = new ArrayList<>();
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 ResultSet rs = preparedStatement.executeQuery();
                 while (rs.next()) {
                     int id = rs.getInt("fruitID");
                     String Name = rs.getString("Name");
                     double Price = rs.getDouble("Price");
-                    double Discount = rs.getDouble("Discount");
                     String Description = rs.getString("Discription");
                     String DateIn = rs.getString("DateIn");
                     int Day = rs.getInt("Day");
                     String Image = rs.getString("Image");
-                    fruits.add(new Fruit(id, Name, Price, Discount, Description, DateIn, Day, Image));
+                    fruits.add(new Fruit(id, Name, Price, Description, DateIn, Day, Image));
                 }
             } catch (SQLException e) {
                     printSQLException(e);
@@ -123,7 +127,9 @@ public class DataSQL {
             List<Order> orders = new ArrayList<>();
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 ResultSet rs = preparedStatement.executeQuery();
                 while (rs.next()) {
                     int fruitId = rs.getInt("fruitID");
@@ -152,7 +158,9 @@ public class DataSQL {
             
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 ResultSet rs = preparedStatement.executeQuery();
                 if(rs.next()) {
                     int CartID = rs.getInt("CartID");
@@ -180,25 +188,30 @@ public class DataSQL {
             return totalPrice;
         }
         
-        public boolean order(String userID, String fruitID) throws SQLException{
+        public boolean order(String userID, String fruitID, String... values) throws SQLException{
             
             int orderID = getProcessingOrder(userID);
             
             if(orderID <= 0 && Integer.parseInt(userID) != 0){
                 return newOrder(userID,String.valueOf(orderID),fruitID);
             }else{
-                return updateQty(userID,String.valueOf(orderID),fruitID);
+                return updateQty(userID,String.valueOf(orderID),fruitID, values[0]);
             }
             
         }
         
         public boolean finishOrder(String userID) throws SQLException{
             
-            query = "UPDATE ORDERS SET STATUS = 'DONE' WHERE USERID = " + userID ;
+            query = "UPDATE ORDERS SET STATUS = ? WHERE USERID = ?";
             
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                preparedStatement.setString(1, "DONE");
+                preparedStatement.setString(2, userID);
+                        
+                System.out.println(preparedStatement + "\n\n");
+                
                 if(preparedStatement.executeUpdate() > 0){
                     return true;
                 }
@@ -212,16 +225,19 @@ public class DataSQL {
         private boolean newOrder(String userID,String orderID, String fruitID) throws SQLException{
             query = "INSERT INTO ORDERS " +
                     " (ORDERDATE,USERID,TOTALPRICE,STATUS) " +
-                    " VALUES ('" +
-                    formatter.format(date) + "', " +
-                    Integer.valueOf(userID) + "," + 
-                    "0," +
-                    "'PROCESSING')";
+                    "  VALUES (?,?,?,?)";
             
             boolean isCreated = false;
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                preparedStatement.setString(1, formatter.format(date));
+                preparedStatement.setString(2, userID);
+                preparedStatement.setInt(3, 0);
+                preparedStatement.setString(4, "PROCESSING");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 if(preparedStatement.executeUpdate() > 0){
                     isCreated = true;
                 }
@@ -239,7 +255,9 @@ public class DataSQL {
                     " AND STATUS = 'PROCESSING'";
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 ResultSet rs = preparedStatement.executeQuery();
                 if(rs.next())
                     return rs.getInt("ORDERID");
@@ -254,15 +272,18 @@ public class DataSQL {
             if(Integer.parseInt(orderID) > 0){
                 query = "INSERT INTO CART" +
                         " (CARTDATE,FRUITID,ORDERID,QUANTITY) " +
-                        " VALUES ('" + 
-                        formatter.format(date) + "', " +
-                        fruitID + "," + 
-                        orderID + "," +
-                        "1)";
+                        "  VALUES (?,?,?,?)";
                 
                 try{
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
-                    System.out.println(query + "\n\n");
+                    
+                    preparedStatement.setString(1, formatter.format(date));
+                    preparedStatement.setString(2, fruitID);
+                    preparedStatement.setString(3, orderID);
+                    preparedStatement.setInt(4, 1);
+                    
+                    System.out.println(preparedStatement + "\n\n");
+                    
                     if(preparedStatement.executeUpdate() > 0){
                         return true;
                     }
@@ -273,7 +294,7 @@ public class DataSQL {
             return false;
         }
         
-        public boolean updateQty(String userID,String orderID, String fruitId) throws SQLException{
+        private boolean updateQty(String userID,String orderID, String fruitId, String... values) throws SQLException{
             
             Cart cart = getACartByFruidID(userID,orderID,fruitId);
             if(cart == null){ //It mean not yet added this fruit to cart
@@ -282,29 +303,61 @@ public class DataSQL {
             
             int oldQty = cart.getQuantity();
             
+            int newQty = values[0].equals("remove") ? (oldQty - 1) : (oldQty + 1);
+            
             query = " UPDATE ORDERS  " +
                     " INNER JOIN CART  " +
                     " ON ORDERS.ORDERID = CART.ORDERID " +
                     " INNER JOIN FRUIT " +
                     " ON CART.FRUITID = FRUIT.FRUITID " +
                     " SET  " +
-                    " CART.CARTDATE = '" + formatter.format(date) +"',"+ 
-                    " CART.QUANTITY = " + (oldQty + 1) +
+                    " CART.CARTDATE = ? " + 
+                    " CART.QUANTITY = ? " +
                     " WHERE  " +
                     " ORDERS.STATUS = 'PROCESSING'  " +
-                    " AND ORDERS.USERID = " + userID +
-                    " AND ORDERS.ORDERID = " + orderID +
-                    " AND FRUIT.FRUITID =  " + fruitId ;
+                    " AND ORDERS.USERID = ? " + 
+                    " AND ORDERS.ORDERID = ? " + 
+                    " AND FRUIT.FRUITID =  ? ";
             
             try{
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                System.out.println(query + "\n\n");
+                
+                preparedStatement.setString(1, formatter.format(date));
+                preparedStatement.setInt(2, newQty);
+                preparedStatement.setString(3, userID);
+                preparedStatement.setString(4, orderID);
+                preparedStatement.setString(5, fruitId);
+                
+                System.out.println(preparedStatement + "\n\n");
+                
                 if(preparedStatement.executeUpdate() > 0){
                     return true;
                 }
             } catch (SQLException e) {
                 printSQLException(e);
             }
+            
+            return false;
+        }
+        
+        public boolean deleteCart(String orderID, String fruitId){
+            query = " DELETE  FROM CART " +
+                    " WHERE  ORDERID = ?" +
+                    " AND FRUITID = ? " ;
+                try{
+                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+                    
+                    preparedStatement.setString(1, orderID);
+                    preparedStatement.setString(2, fruitId);
+                    
+                    System.out.println(preparedStatement + "\n\n");
+                    
+                    if(preparedStatement.executeUpdate() > 0){
+                        return true;
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
             
             return false;
         }

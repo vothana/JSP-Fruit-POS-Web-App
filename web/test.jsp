@@ -56,13 +56,13 @@
             
             String fruitID = "2";
 
-            boolean isAdded = data.order(userID, fruitID);
+            //boolean isAdded = data.order(userID, fruitID);
     
-            if(isAdded){
-              out.print("<br>" + "Success");
-            }else{
-              out.print("<br>" + "Failed");
-            }
+            //if(isAdded){
+            //  out.print("<br>" + "Success");
+            //}else{
+            //  out.print("<br>" + "Failed");
+            //}
             
             out.print("<br><br>==================================");
 

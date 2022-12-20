@@ -84,17 +84,12 @@ a{
     top: 4px;
 }
 .profileImg{
-    position: relative;
     width: 50px;
     height: 50px;
-    padding: 10px;
     border-radius: 100%;
     margin-left: 10px;
-    text-align: center;
-    align-self: baseline;
     overflow: hidden;
     cursor: pointer;
-    background-color: rgb(196, 105, 105);
 }
 .profileImg img{
     width: 50px;
@@ -159,7 +154,7 @@ a{
     width: 100%;
     height: 120px;
     display: flex;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .detail_box{
     width: 30%;
@@ -181,17 +176,55 @@ a{
     height: 100%;
 }
 .detail {
+    position: relative;
    display: flex;
    flex-direction: column;
-   justify-content: space-evenly;
    margin-left: 10px;
+   padding-left: 10px;
+   border-radius: 5px;
+   border-left: 2px solid rgb(0, 145, 7);
+}
+.detail p:nth-child(2){
+    color: #859400;
+}
+.detail .remove{
+    position: absolute;
+    bottom: 0;
+    padding: 0 !important;
+    margin: 0 !important;
+    cursor: pointer;
+    transition: all 0.22s ease;
+}
+.detail .remove:hover{
+    color: red;
+    font-weight: 700;
+    transition: all 0.22s ease;
 }
 .text{
     flex: 1;
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin-top: 60px;
+    align-items: center;
+    margin: 0;
+        font-weight: 700;
+}
+.text p{
+    margin: 0;
+}
+
+.qty_text{
+    padding: 5px 10px 5px 10px;
+    color: whitesmoke;
+    border-radius: 10px;
+    margin: 0 10px;
+    background-color: #859400;
+}
+.count{
+    margin: 0 10px !important;
+    cursor: pointer;
+}
+.count:hover{
+    color: #859400;
 }
 
 .cart_bottom{
@@ -218,6 +251,11 @@ a{
     cursor: pointer;
     color: blue;
     background-color: rgb(63, 182, 148);
+}
+.totalPrice{
+    padding-top: 10px;
+    font-weight: 700;
+    color: #859400;
 }
 .btnCheckOut:hover{
     background-color: rgb(145, 145, 91);
