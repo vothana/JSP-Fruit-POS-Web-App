@@ -1,3 +1,4 @@
+<%@page import="num.Order"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="num.Fruit"%>
 <%@page import="java.util.List"%>
@@ -10,11 +11,14 @@
 <%
     Cookie[] cookies = request.getCookies();
     String FullName = "User";
+    String userID = "0";
     if(cookies != null){
         for (Cookie cookie : cookies) {
             if (cookie.getName().equals("fullName")) {
                 FullName = "@" + cookie.getValue();
-                break;
+            }
+            if(cookie.getName().equals("id")){
+                userID = cookie.getValue();
             }
         }
     }
@@ -27,8 +31,12 @@
         searchFruits = data.searchAllFruit(request.getParameter("search"));
     }
     
-    if(request.getParameter("item") != null && request.getParameter("item") != ""){
-        
+    List<Order> orders = data.getActiveOrder(userID);
+    int allQuantity = 0;
+    if(!orders.isEmpty()){
+        for(Order order : orders){
+            allQuantity += order.getQuantity();
+        }
     }
 %>
 
@@ -40,7 +48,7 @@
     <title>Fruit Store</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/store.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/store.css"/>
     
     <jsp:useBean id="bean" class="num.DataSQL" />
     <jsp:useBean id="get" class="file.get" />
@@ -54,7 +62,7 @@
             if($username === "User"){
                 window.location.replace("login.jsp");
             }else{
-                window.location.replace("store.jsp?item=" + id);
+                window.location.replace("add.jsp?item=" + id);
             }
         };
         
@@ -79,7 +87,9 @@
                         Store
                     </a>
                     <a class="link" href="cart.jsp">
-                        <p class="badge">2</p>
+                        <%  if(allQuantity > 0) {%>
+                                    <p class="badge"><%= allQuantity%></p>
+                        <% } %>
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>

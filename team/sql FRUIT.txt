@@ -49,6 +49,14 @@ AND ORDERS.ORDERID =  2
 AND FRUIT.FRUITID =  2;
 
 
+DELETE  FROM CART
+WHERE  ORDERID = 21  AND FRUITID = 2;
+
+
+
+stackoverflow.com/
+questions/4459379/preview-an-image-before-it-is-uploaded
+
 
 
 

@@ -22,7 +22,6 @@ public class Fruit {
     private int id;
     private String Name;
     private double Price;
-    private double Discount;
     private String Description;
     private String DateIn;
     private int Day;
