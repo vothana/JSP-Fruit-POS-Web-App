@@ -1,0 +1,15 @@
+Set @autoid :=0;
+update cart set cartId = @auto := (@autoid+1);
+alter table cart Auto_increment = 1;
+
+Set @autoid :=0;
+update fruit set fruitID = @auto := (@autoid+1);
+alter table fruit Auto_increment = 1;
+
+Set @autoid :=0;
+update orders set orderid = @auto := (@autoid+1);
+alter table orders Auto_increment = 1;
+
+Set @autoid :=0;
+update users set userid = @auto := (@autoid+1);
+alter table users Auto_increment = 1;
