@@ -72,7 +72,6 @@
                 function add(fruitID){
                     window.location.replace("add.jsp?item=" + fruitID + "&&add=" +  fruitID);
                 };
-                
             </script>
             
         </head>

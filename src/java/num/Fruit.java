@@ -27,4 +27,13 @@ public class Fruit {
     private int Day;
     private String Image;
 
+    public Fruit(String Name, double Price, String Description, String DateIn, int Day, String Image) {
+        this.Name = Name;
+        this.Price = Price;
+        this.Description = Description;
+        this.DateIn = DateIn;
+        this.Day = Day;
+        this.Image = Image;
+    }
 }
+
