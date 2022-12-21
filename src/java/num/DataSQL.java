@@ -311,7 +311,7 @@ public class DataSQL {
                     " INNER JOIN FRUIT " +
                     " ON CART.FRUITID = FRUIT.FRUITID " +
                     " SET  " +
-                    " CART.CARTDATE = ? " + 
+                    " CART.CARTDATE = ? ," + 
                     " CART.QUANTITY = ? " +
                     " WHERE  " +
                     " ORDERS.STATUS = 'PROCESSING'  " +

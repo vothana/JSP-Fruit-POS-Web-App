@@ -53,6 +53,17 @@ DELETE  FROM CART
 WHERE  ORDERID = 21  AND FRUITID = 2;
 
 
+" INSERT INTO FRUIT " +
+" (NAME, PRICE, DISCRIPTION, DATEIN, DAY, IMAGE) " +
+" VALUES (?, ?, ?, ?, ?, ?) ";
+
+PreparedStatement preparedStmt = conn.prepareStatement(sql);
+preparedStmt.setString (1, s.first_name);
+
+preparedStmt.execute();
+
+
+" UPDATE FRUIT
 
 stackoverflow.com/
 questions/4459379/preview-an-image-before-it-is-uploaded
