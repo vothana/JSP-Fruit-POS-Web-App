@@ -13,6 +13,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.FileUploadException;
 /**
  *
  * @author VothanaCHY
@@ -21,8 +23,6 @@ public class DataSQL {
     
     private final Database database = new Database();
     
-        Connection connection = database.connect();
-        
         String query;
         SimpleDateFormat formatter = new SimpleDateFormat("yyy-MM-dd");
         Date date = new Date();
@@ -40,6 +40,7 @@ public class DataSQL {
             List<User> users = new ArrayList<>();
             
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 System.out.println(preparedStatement + "\n\n");
@@ -65,6 +66,7 @@ public class DataSQL {
             List<Fruit> fruits = new ArrayList<>();
             
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 System.out.println(preparedStatement + "\n\n");
@@ -92,6 +94,7 @@ public class DataSQL {
             query = "SELECT * FROM `FRUIT` WHERE NAME LIKE '%" + search +"%' ;";
             List<Fruit> fruits = new ArrayList<>();
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 System.out.println(preparedStatement + "\n\n");
@@ -126,6 +129,7 @@ public class DataSQL {
                     " ORDERS.ORDERID " + INNERJOIN + userID + ";";
             List<Order> orders = new ArrayList<>();
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 System.out.println(preparedStatement + "\n\n");
@@ -157,6 +161,7 @@ public class DataSQL {
             Cart cart = null;
             
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 System.out.println(preparedStatement + "\n\n");
@@ -205,6 +210,7 @@ public class DataSQL {
             query = "UPDATE ORDERS SET STATUS = ? WHERE USERID = ?";
             
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 preparedStatement.setString(1, "DONE");
@@ -229,6 +235,7 @@ public class DataSQL {
             
             boolean isCreated = false;
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 preparedStatement.setString(1, formatter.format(date));
@@ -254,6 +261,7 @@ public class DataSQL {
             query = " SELECT ORDERID FROM ORDERS WHERE USERID = " + userID + 
                     " AND STATUS = 'PROCESSING'";
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 System.out.println(preparedStatement + "\n\n");
@@ -275,6 +283,7 @@ public class DataSQL {
                         "  VALUES (?,?,?,?)";
                 
                 try{
+                    Connection connection = database.connect();
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
                     
                     preparedStatement.setString(1, formatter.format(date));
@@ -320,6 +329,7 @@ public class DataSQL {
                     " AND FRUIT.FRUITID =  ? ";
             
             try{
+                Connection connection = database.connect();
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
                 
                 preparedStatement.setString(1, formatter.format(date));
@@ -345,6 +355,7 @@ public class DataSQL {
                     " WHERE  ORDERID = ?" +
                     " AND FRUITID = ? " ;
                 try{
+                    Connection connection = database.connect();
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
                     
                     preparedStatement.setString(1, orderID);
@@ -361,6 +372,139 @@ public class DataSQL {
             
             return false;
         }
+        
+        public int getMaxIdFruit(){
+            query = " SELECT MAX(FRUITID) FROM FRUIT;";
+                try{
+                    Connection connection = database.connect();
+                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+
+                    System.out.println(preparedStatement + "\n\n");
+                    
+                    ResultSet rs = preparedStatement.executeQuery();
+                    
+                    if(rs.next()){
+                        return rs.getString(1) != null ? Integer.parseInt(rs.getString(1)) : 0;
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+            
+            return -1;
+        }
+        
+        public boolean deleteFruit(String fruitId){
+            query = " DELETE FROM FRUIT " +
+                    " WHERE FRUITID = ? " ;
+                try{
+                    Connection connection = database.connect();
+                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+                    
+                    preparedStatement.setString(1, fruitId);
+                    
+                    System.out.println(preparedStatement + "\n\n");
+                    
+                    if(preparedStatement.executeUpdate() > 0){
+                        return true;
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+            
+            return false;
+        }
+         
+        public boolean createFruit(List<FileItem> fileItems) throws FileUploadException{
+            query = " INSERT INTO " +
+                    " FRUIT (NAME, PRICE, DISCRIPTION, DATEIN, DAY, IMAGE)" +
+                    " VALUES (?,?,?,?,?,?); ";
+                try{
+                    Connection connection = database.connect();
+                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+                    
+                    int i = 1;
+                    for (FileItem item : fileItems) {
+                        if(!("id".equals(item.getFieldName()))){
+                            if(!("Image".equals(item.getFieldName()))){
+                                preparedStatement.setString(i, item.getString());
+                                System.out.println( i + " Field = " + item.getFieldName() + "  Value = " + item.getString());
+                                i++;
+                            }else{
+                                preparedStatement.setString(i, item.getName());
+                                System.out.println( i + " Field = " + item.getFieldName() + "  Name = " + item.getName());
+                                i++;
+                            }
+                        }
+                    }
+
+                    System.out.println(preparedStatement + "\n\n");
+                    
+                    if(preparedStatement.executeUpdate() > 0){
+                        return true;
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+            
+            return false;
+        }
+       
+        public boolean updateFruit(List<FileItem> fileItems) throws FileUploadException{
+            query = " UPDATE FRUIT" +
+                    " SET " + 
+                    " NAME = ? ," +
+                    " PRICE = ? ," +
+                    " DISCRIPTION = ? ," + 
+                    " DATEIN = ? , " + 
+                    " DAY = ? , " + 
+                    " IMAGE = ? " + 
+                    " WHERE FRUITID = ? ;";
+                try{
+                    Connection connection = database.connect();
+                    PreparedStatement preparedStatement = connection.prepareStatement(query);
+                    
+                    int i = 1;
+                    String id = "";
+                    for (FileItem item : fileItems) {
+                        if(!("id".equals(item.getFieldName()))){
+                            if(!("Image".equals(item.getFieldName()))){
+                                preparedStatement.setString(i, item.getString());
+                                System.out.println( i + " Field = " + item.getFieldName() + "  Value = " + item.getString());
+                                i++;
+                            }else{
+                                preparedStatement.setString(i, item.getName());
+                                System.out.println( i + " Field = " + item.getFieldName() + "  Name = " + item.getName());
+                                i++;
+                            }
+                        }else{
+                            id = item.getString();
+                        }
+                    }
+                    preparedStatement.setString(7, id);
+                    System.out.println(preparedStatement + "\n\n");
+                    
+                    if(preparedStatement.executeUpdate() > 0){
+                        return true;
+                    }
+                } catch (SQLException e) {
+                    printSQLException(e);
+                }
+            
+            return false;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         private void checkConnectionState() throws SQLException{
             if(database.connect().isClosed()){

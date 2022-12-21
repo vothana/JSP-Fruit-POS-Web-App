@@ -69,12 +69,35 @@ stackoverflow.com/
 questions/4459379/preview-an-image-before-it-is-uploaded
 
 
+INSERT INTO 
+FRUIT (NAME, PRICE, DISCRIPTION, DATEIN, DAY, IMAGE) 
+VALUES (?,?,?,?,?,?);
+
+
+
+INSERT INTO USERS (FULLNAME,USERNAME,PASSWORD)
+VALUES
+('admin','admin','12345'),
+('vothana','vothana','12345'),
+('sarath','sarath','12345'),
+('voutey','voutey','12345'),
+('visal','visal','12345');
+
+FruitName
+Price
+Description
+DateIn
+Day
+Image
 
 
 
 
-
-
+INSERT INTO FRUIT (NAME, PRICE, DISCRIPTION, DATEIN, DAY, IMAGE) 
+VALUES 
+('Mango',2.3,'Mango 300g','2022-12-28','23','mango.jpg'),
+('Cucumber',3.2,'Cucumber 500g','2022-12-20','32','Cucumber.png'),
+('Orange',1.2,'Orange 200g','2022-12-20','32','orange.png');
 
 
 

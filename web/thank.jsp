@@ -95,7 +95,7 @@ RESET
 
             <div class= "body">
                 <a style="text-decoration: none" href="index.jsp">
-                    YOUR ORDER HAS BEEN PLACED, THANK YOU FOR SHOPPING WITH POTTERY CO. ♡ 
+                    YOUR ORDER HAS BEEN PLACED, THANK YOU FOR SHOPPING WITH NUM SHOP. ♡ 
 
                     Click to go home.
                 </a>
