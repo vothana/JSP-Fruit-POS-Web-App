@@ -149,7 +149,7 @@ a{
     display: flex;
     border-radius: 15px;
     flex-direction: column;
-    background-color: #7F8826;
+    background-color: rgb(63, 182, 148);
         box-shadow: 10px 11px 14px -6px rgba(0,0,0,0.3);
     -webkit-box-shadow: 10px 11px 14px -6px rgba(0,0,0,0.3);
     -moz-box-shadow: 10px 11px 14px -6px rgba(0,0,0,0.3);
