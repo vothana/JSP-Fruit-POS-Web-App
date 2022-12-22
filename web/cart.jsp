@@ -91,7 +91,7 @@
                                 <%  if(allQuantity > 0) {%>
                                     <p class="badge"><%= allQuantity%></p>
                                 <% } %>
-                                <i class="fa-solid fa-cart-shopping"></i>
+                                <i style="font-size: 25px" class="fa-solid fa-cart-shopping"></i>
                             </a>
                         </div>
                     <div class="profile">
