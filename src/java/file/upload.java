@@ -38,32 +38,32 @@ public class upload{
             }
             
             String folder =  PROJECT_SERVER_PATH + "\\web\\images\\";
-            String filePath = folder + id + "\\";
-
-            File fo = new File(folder);
-            if (!fo.exists()){
-                fo.mkdir();
-            }
-
-            File directory = new File(filePath);
-            if (!directory.exists()){
-                directory.mkdir();
-            }else{
-                for (File subFile : directory.listFiles()) {
-                 if(subFile.isDirectory()) {
-                    deleteFolder(subFile);
-                 } else {
-                    subFile.delete();
-                 }
-              }
-                directory.delete();
-                directory.mkdir();
-            }
-            
+            String filePath = folder + id + "\\";  
             for (FileItem fi : fileItems) {
                 if ( !fi.isFormField()){
                     String fileName = fi.getName();
                     // Write the file
+                    if("".equals(fileName) || fileName == null) return false;
+                    
+                                File fo = new File(folder);
+                    if (!fo.exists()){
+                        fo.mkdir();
+                    }
+
+                    File directory = new File(filePath);
+                    if (!directory.exists()){
+                        directory.mkdir();
+                    }else{
+                        for (File subFile : directory.listFiles()) {
+                         if(subFile.isDirectory()) {
+                            deleteFolder(subFile);
+                         } else {
+                            subFile.delete();
+                         }
+                      }
+                        directory.delete();
+                        directory.mkdir();
+                    }
                     if( fileName.lastIndexOf("\\") >= 0 ){
                         file = new File( filePath +
                                 fileName.substring( fileName.lastIndexOf("\\"))) ;

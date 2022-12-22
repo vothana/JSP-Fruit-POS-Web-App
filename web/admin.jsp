@@ -4,6 +4,9 @@
     Author     : VothanaCHY
 --%>
 
+<%@page import="java.time.LocalDateTime"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
+<%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.util.List"%>
 <%@page import="java.util.List"%>
 <%@page import="num.Fruit"%>
@@ -25,6 +28,9 @@
             }
         }
     }
+    
+    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");  
+    LocalDateTime now = LocalDateTime.now();  
         
     DataSQL data = new DataSQL();
     List<Fruit> fruits = data.selectAllFruit();
@@ -98,7 +104,6 @@
         };
         
         $( document ).ready(function() {
-            document.getElementById("Image").removeAttribute("title");
             $('#Image').change(function() {
                 $file = $(this).val();
                 $file = $file.replace(/.*[\/\\]/, '');
@@ -163,7 +168,7 @@
                         </div>
                         <div class="inputField">
                           <label class="label" for="Price">Price</label>
-                          <input type="number" name="Price" id="Price" placeholder="Price" value="<%= fruit.getPrice()%>">
+                          <input type="text" name="Price" id="Price" placeholder="Price" value="<%= fruit.getPrice()%>">
                         </div>
                         <div class="inputField">
                           <label class="label" for="Description">Description</label>
@@ -205,15 +210,15 @@
                     </div>
                     <div class="inputField">
                       <label class="label" for="Price">Price</label>
-                      <input type="number" name="Price" id="Price" placeholder="Price">
+                      <input type="text" name="Price" id="Price" placeholder="Price">
                     </div>
                     <div class="inputField">
                       <label class="label" for="Description">Description</label>
                       <input type="text" name="Description" id="Description" placeholder="Description">
                     </div>
                     <div class="inputField">
-                      <label class="label" for="DateIn">DateIn</label>
-                      <input type="date" name="DateIn" id="DateIn">
+                      <label class="label" for="DateIn">Date In</label>
+                      <input type="date" name="DateIn" id="DateIn" value="<%= dtf.format(now) %>">
                     </div>
                     <div class="inputField">
                       <label class="label" for="Day">Day</label>

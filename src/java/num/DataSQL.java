@@ -5,6 +5,8 @@
 package num;
 
 
+import static file.delete.deleteFolder;
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import static num.PATH.PROJECT_SERVER_PATH;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 /**
@@ -464,7 +467,8 @@ public class DataSQL {
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
                     
                     int i = 1;
-                    String id = "";
+                    String id = "";    
+                    boolean isUpdating = false;
                     for (FileItem item : fileItems) {
                         if(!("id".equals(item.getFieldName()))){
                             if(!("Image".equals(item.getFieldName()))){
@@ -472,14 +476,32 @@ public class DataSQL {
                                 System.out.println( i + " Field = " + item.getFieldName() + "  Value = " + item.getString());
                                 i++;
                             }else{
-                                preparedStatement.setString(i, item.getName());
-                                System.out.println( i + " Field = " + item.getFieldName() + "  Name = " + item.getName());
+                                if(!"".equals(item.getName())){
+                                    preparedStatement.setString(i, item.getName());
+                                    System.out.println( i + " Field = " + item.getFieldName() + "  Name = " + item.getName());
+                                }else{
+                                    isUpdating = true;
+                                }
                                 i++;
                             }
                         }else{
                             id = item.getString();
                         }
                     }
+                    
+                    if(isUpdating){
+                        String image = "";
+                        String folder =  PROJECT_SERVER_PATH + "\\web\\images\\" + id + "\\";
+                        File directory = new File(folder);
+                        if (directory.exists()){
+                             for (File subFile : directory.listFiles()) {
+                                image = subFile.getName();
+                                System.out.println("==========================" + subFile.getName());
+                             }
+                            preparedStatement.setString(6, image);
+                        }
+                    }
+                    
                     preparedStatement.setString(7, id);
                     System.out.println(preparedStatement + "\n\n");
                     
