@@ -44,7 +44,7 @@
         url = "cart.jsp";
     }else if(request.getParameter("item") != null && request.getParameter("item") != ""){
         data.order(userID, String.valueOf(request.getParameter("item")), "");
-        url = "store.jsp";
+        url = "store.jsp?id=" + String.valueOf(request.getParameter("item"));
     }else if(request.getParameter("new") != null && request.getParameter("new") != ""){
         if ((contentType.contains("multipart/form-data"))) {
             fileItems = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
