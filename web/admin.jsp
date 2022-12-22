@@ -33,8 +33,6 @@
     int maxID = data.getMaxIdFruit();
     int maxFruitId =  maxID != -1 ? maxID += 1 : 0;
     
-    out.print(maxFruitId);
-    
     if(request.getParameter("search") != null && request.getParameter("search") != ""){
         searchFruits = data.searchAllFruit(request.getParameter("search"));
     }

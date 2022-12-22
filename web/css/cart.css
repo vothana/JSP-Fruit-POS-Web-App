@@ -75,11 +75,13 @@ a{
     color: aliceblue;
 }
 .badge{
+    width: 15px;
+    height: 15px;
+    color: white;
     position: absolute;
-    border-radius: 100%;
-    padding: 7px;
+    border-radius: 405px;
     background-color: rgb(196, 105, 105);
-    font-size: 8px;
+    font-size: 10px;
     left: 52px;
     top: 4px;
 }

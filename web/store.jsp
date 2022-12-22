@@ -90,7 +90,7 @@
                         <%  if(allQuantity > 0) {%>
                                     <p class="badge"><%= allQuantity%></p>
                         <% } %>
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i style="font-size: 25px" class="fa-solid fa-cart-shopping"></i>
                     </a>
                 </div>
                 <div class="profile">
@@ -152,6 +152,7 @@
                         <div class="desc">
                             <strong>Description:</strong>
                             <p style="font-size: 12px">&emsp;<%= desc %></p>
+                            <br>
                             <strong style="margin-top: 10px">Can keep: <span style="color: red"><%= expiredDay %> Days more</span></strong>
                         </div>
                         <div class="btnAdd" onclick="addToCart( <%= id %> )">
