@@ -7,33 +7,48 @@
 <%@page import="num.DataSQL"%>
 <%
     Cookie[] cookies = request.getCookies();
-    String userID = "0";
-      if(cookies != null){
-          for (Cookie cookie : cookies) {
-              if (cookie.getName().equals("id")) {
-                  userID = cookie.getValue();
-                  break;
-              }
-          }
-      }
     DataSQL data = new DataSQL();
+    String userID = "0";
     String url = "";
+    boolean isWrong = false;
     
+    if(cookies != null){
+        for (Cookie cookie : cookies) {
+            if (cookie.getName().equals("id")) {
+                userID = cookie.getValue();
+                break;
+            }
+        }
+    }
+
     if(request.getParameter("remove") != null && request.getParameter("remove") != ""){
+    
         data.order(userID, String.valueOf(request.getParameter("item")), "remove");
         url = "cart.jsp";
+        
     }else if(request.getParameter("item") != null && request.getParameter("item") != ""){
+    
         data.deleteCart(String.valueOf(request.getParameter("oderID")), String.valueOf(request.getParameter("item")));
         url = "cart.jsp";
+        
     }else if(request.getParameter("fruitID") != null && request.getParameter("fruitID") != ""){
+    
         data.deleteFruit(request.getParameter("fruitID"));
         url = "admin.jsp";
+        
+    }else{
+    
+        out.print("\nSomething wrong !");
+        isWrong = true;
+        
     }
     
 %>
 
-<script>
+<% if(!isWrong) { %>
+    <script>
         $( document ).ready(function() {
             window.location.replace("<%= url %>");
         });
-</script>
+    </script>
+<% } %>

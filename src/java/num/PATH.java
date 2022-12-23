@@ -9,6 +9,7 @@ package num;
  * @author VothanaCHY
  */
 public interface PATH {
-    String classpath = System.getProperty("user.dir");
-    public String PROJECT_SERVER_PATH = classpath.split("tomcat")[0];
+    //You must put tomcat server in the project directory
+    String classPath = System.getProperty("user.dir");
+    public String PROJECT_SERVER_PATH = classPath.split("tomcat")[0];
 }

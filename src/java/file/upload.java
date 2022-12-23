@@ -6,13 +6,9 @@ package file;
 
 import static file.delete.deleteFolder;
 import java.io.File;
-import static java.lang.System.out;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import static num.PATH.PROJECT_SERVER_PATH;
 import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
  *
@@ -33,36 +29,32 @@ public class upload{
                 }
             }
             
-            if("".equals(id)){
-                return false;
-            }
+            if("".equals(id)) return false;
             
             String folder =  PROJECT_SERVER_PATH + "\\web\\images\\";
-            String filePath = folder + id + "\\";  
+            String filePath = folder + id + "\\"; 
+            
             for (FileItem fi : fileItems) {
                 if ( !fi.isFormField()){
                     String fileName = fi.getName();
-                    // Write the file
                     if("".equals(fileName) || fileName == null) return false;
                     
-                                File fo = new File(folder);
-                    if (!fo.exists()){
-                        fo.mkdir();
-                    }
+                    file = new File(folder);
+                    if (!file.exists()) file.mkdir();
 
-                    File directory = new File(filePath);
-                    if (!directory.exists()){
-                        directory.mkdir();
+                    file = new File(filePath);
+                    if (!file.exists()){
+                        file.mkdir();
                     }else{
-                        for (File subFile : directory.listFiles()) {
+                        for (File subFile : file.listFiles()) {
                          if(subFile.isDirectory()) {
                             deleteFolder(subFile);
                          } else {
                             subFile.delete();
                          }
                       }
-                        directory.delete();
-                        directory.mkdir();
+                        file.delete();
+                        file.mkdir();
                     }
                     if( fileName.lastIndexOf("\\") >= 0 ){
                         file = new File( filePath +

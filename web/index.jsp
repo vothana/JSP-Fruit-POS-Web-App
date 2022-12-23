@@ -38,8 +38,19 @@
             $username = $.trim($('#username').text());
             if($username === "User"){
                 window.location.replace("login.jsp");
+            }else if ($username === "@admin") {
+                window.location.replace("admin.jsp");
             }
         };
+        
+        $(document).ready(function() {
+            $username = $.trim($('#username').text());
+            if ($username === "@admin") {
+                $('#fruitMG').css("display", "block");
+            }else{
+                $('#fruitMG').css("display", "none");
+            }
+        });
       </script>
 </head>
 
@@ -53,6 +64,10 @@
                     </a>
                     <a class="link" href="store.jsp">
                         Store
+                    </a>
+                    </a>
+                        <a class="link" href="admin.jsp" style="background: #7de779; width: 250px" id="fruitMG">
+                        Fruit Management
                     </a>
                 </div>
                 <div class="profile">

@@ -16,8 +16,15 @@
 
 <%
     Cookie[] cookies = request.getCookies();
-    String FullName = "User";
+    DataSQL data = new DataSQL();
+    upload file = new upload();
+    List<FileItem> fileItems = null;    
+    String contentType = request.getContentType();
+        String FullName = "User";
     String userID = "0";
+    String url = "";
+    boolean isWrong = false;
+    
     if(cookies != null){
         for (Cookie cookie : cookies) {
             if (cookie.getName().equals("fullName")) {
@@ -28,24 +35,19 @@
             }
         }
     }
-    
-    String url = "";
-    
-    boolean isWrong = false;
-        
-    DataSQL data = new DataSQL();
-    Fruit fruit = null;
-    upload file = new upload();
-    List<FileItem> fileItems = null;    
-    String contentType = request.getContentType();
-        
+
     if(request.getParameter("add") != null && request.getParameter("add") != ""){
+    
         data.order(userID, String.valueOf(request.getParameter("item")), "");
         url = "cart.jsp";
+        
     }else if(request.getParameter("item") != null && request.getParameter("item") != ""){
+    
         data.order(userID, String.valueOf(request.getParameter("item")), "");
         url = "store.jsp?id=" + String.valueOf(request.getParameter("item"));
+        
     }else if(request.getParameter("new") != null && request.getParameter("new") != ""){
+    
         if ((contentType.contains("multipart/form-data"))) {
             fileItems = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
         }
@@ -53,7 +55,9 @@
         file.uploadFile(fileItems);
         data.createFruit(fileItems);
         url = "admin.jsp";
+        
     }else if(request.getParameter("update") != null && request.getParameter("update") != ""){
+    
         if ((contentType.contains("multipart/form-data"))) {
             fileItems = new ServletFileUpload(new DiskFileItemFactory()).parseRequest(request);
         }
@@ -61,9 +65,12 @@
         file.uploadFile(fileItems);
         data.updateFruit(fileItems);
         url = "admin.jsp";
+        
     }else{
+    
         out.print("\nSomething wrong !");
         isWrong = true;
+        
     }
 %>
 

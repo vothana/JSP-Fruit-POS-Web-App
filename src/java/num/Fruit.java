@@ -4,7 +4,6 @@
  */
 package num;
 
-import java.sql.Blob;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,14 +25,5 @@ public class Fruit {
     private String DateIn;
     private int Day;
     private String Image;
-
-    public Fruit(String Name, double Price, String Description, String DateIn, int Day, String Image) {
-        this.Name = Name;
-        this.Price = Price;
-        this.Description = Description;
-        this.DateIn = DateIn;
-        this.Day = Day;
-        this.Image = Image;
-    }
 }
 

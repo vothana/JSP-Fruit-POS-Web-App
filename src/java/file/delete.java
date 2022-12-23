@@ -11,6 +11,8 @@ import java.io.File;
  * @author VothanaCHY
  */
 public class delete {
+    //This method we want to make sure only one image in the\
+    //fruit's image folder
     public static void deleteFolder(File file){
       for (File subFile : file.listFiles()) {
          if(subFile.isDirectory()) {
