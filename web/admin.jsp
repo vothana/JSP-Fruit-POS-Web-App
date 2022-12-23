@@ -1,5 +1,5 @@
 <%-- 
-    Document   : home.jp
+    Document   : admin.jsp
     Created on : Dec 15, 2022, 11:06:16 PM
     Author     : VothanaCHY
 --%>
@@ -62,69 +62,77 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="./css/admin.css" />
   
-  <jsp:useBean id="get" class="file.get" />
-  
-       <script type="text/javascript">
-           
-        function goLogin(){
+<jsp:useBean id="get" class="file.get" />
+
+    <script type="text/javascript">
+        $(document).ready(function() {
             $username = $.trim($('#username').text());
-            if($username === "User"){
+            if ($username !== "@admin") {
                 window.location.replace("login.jsp");
             }
-        };
-        
-        function editFruit(fruitID){
-            $username = $.trim($('#username').text());
-            if($username !== "User"){
-                window.location.replace("admin.jsp?id=" + fruitID);
-            }else{
-                window.location.replace("login.jsp");
-            }
-        };
-        
-        function deleteFruit(fruitID){
-            $username = $.trim($('#username').text());
-            if($username !== "User"){
-                window.location.replace("remove.jsp?fruitID=" + fruitID);
-            }else{
-                window.location.replace("login.jsp");
-            }
-        };
-        
-        function idFruit(fruitID){
-            var $action = 'deleteFruit(' + fruitID + ')';
-            $('#deleteFruit').attr("onclick", $action);
-        };
-        
-        $( document ).ready(function() {
-            $('#Image').change(function() {
-                $file = $(this).val();
-                $file = $file.replace(/.*[\/\\]/, '');
-                $('#imageName').text($file);
-            });
         });
-        
-        function addFruit(action){
-            $username = $.trim($('#username').text());
-            if($username !== "User"){
-                if(action === 'add'){
-                    $('#form').attr("action", 'add.jsp?new=fruit');
-                }else if(action === 'update'){
-                    $('#form').attr("action", 'add.jsp?update=fruit');
-                }
-            }else{
-                window.location.replace("login.jsp");
-            }
-        }
-           
-      </script>
+
+      function goLogin(){
+          $username = $.trim($('#username').text());
+          if($username === "User"){
+              window.location.replace("login.jsp");
+          }else if ($username === "@admin") {
+                window.location.replace("admin.jsp");
+          }
+      };
+
+      function editFruit(fruitID){
+          $username = $.trim($('#username').text());
+          if($username !== "User"){
+              window.location.replace("admin.jsp?id=" + fruitID);
+          }else{
+              window.location.replace("login.jsp");
+          }
+      };
+
+      function deleteFruit(fruitID){
+          $username = $.trim($('#username').text());
+          if($username !== "User"){
+              window.location.replace("remove.jsp?fruitID=" + fruitID);
+          }else{
+              window.location.replace("login.jsp");
+          }
+      };
+
+      function idFruit(fruitID){
+          var $action = 'deleteFruit(' + fruitID + ')';
+          $('#deleteFruit').attr("onclick", $action);
+      };
+
+      $( document ).ready(function() {
+          $('#Image').change(function() {
+              $file = $(this).val();
+              $file = $file.replace(/.*[\/\\]/, '');
+              $('#imageName').text($file);
+          });
+      });
+
+      function addFruit(action){
+          $username = $.trim($('#username').text());
+          if($username !== "User"){
+              if(action === 'add'){
+                  $('#form').attr("action", 'add.jsp?new=fruit');
+              }else if(action === 'update'){
+                  $('#form').attr("action", 'add.jsp?update=fruit');
+              }
+          }else{
+              window.location.replace("login.jsp");
+          }
+      }
+
+    </script>
   
 </head>
 
@@ -190,7 +198,7 @@
                                 ><%= fruit.getImage()%>
                              </span>
                           </label>
-                          <input type="file" name="Image" id="Image" value="<%= fruit.getImage()%>" style="display: none">
+                          <input type="file" name="Image" id="Image" value="<%= fruit.getImage() %>" style="display: none">
                         </div>
                         <div class="btn_box" >
                             <div class="btn-submit">
@@ -265,6 +273,9 @@
                     <%
                         if(!fruits.isEmpty()){
                             for(Fruit fruit : fruits){ 
+                                String imagePath = get.getFilePath(fruit.getImage(), String.valueOf(fruit.getId())) == null 
+                                                   ? "./images/NoImage.png" 
+                                                   : get.getFilePath(fruit.getImage(), String.valueOf(fruit.getId()));
                             %>
                               <tr class="table-tr">
                                 <td><%= fruit.getName() %></td>
@@ -273,7 +284,7 @@
                                 <td><%= fruit.getDateIn()%></td>
                                 <td><%= fruit.getDay()%></td>
                                 <th scope="row" class="fruitImg">
-                                  <img src="<%= get.getFilePath(fruit.getImage(), String.valueOf(fruit.getId())) %>">
+                                  <img src="<%= imagePath %>">
                                 </th>
                                 <td>
                                     <a class='btn btn-primary btn-sm' onclick="editFruit(<%= fruit.getId() %>)"> Edit</a>
