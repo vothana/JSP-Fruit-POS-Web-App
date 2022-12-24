@@ -63,35 +63,6 @@ public class DataSQL {
             return users;
 	}
         
-        public List<Fruit> selectAllFruit() throws SQLException{
-            
-            query = "SELECT * FROM FRUIT";
-            List<Fruit> fruits = new ArrayList<>();
-            
-            try{
-                Connection connection = database.connect();
-                PreparedStatement preparedStatement = connection.prepareStatement(query);
-                
-                System.out.println(preparedStatement + "\n\n");
-                
-                ResultSet rs = preparedStatement.executeQuery();
-                while (rs.next()) {
-                    int id = rs.getInt("fruitID");
-                    String Name = rs.getString("Name");
-                    double Price = rs.getDouble("Price");
-                    String Description = rs.getString("Discription");
-                    String DateIn = rs.getString("DateIn");
-                    int Day = rs.getInt("Day");
-                    String Image = rs.getString("Image");
-                    fruits.add(new Fruit(id, Name, Price, Description, DateIn, Day, Image));
-                } 
-            } catch (SQLException e) {
-                    printSQLException(e);
-            }
-            
-            return fruits;
-        }
-        
         public List<Fruit> searchAllFruit(String search) throws SQLException{
             
             query = "SELECT * FROM `FRUIT` WHERE NAME LIKE '%" + search +"%' ;";
