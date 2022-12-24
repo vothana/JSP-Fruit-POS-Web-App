@@ -36,6 +36,7 @@ This is tiny project created by a team has 4 members for final project in **Serv
   In project's properties:
   - On Run section: Select server that we have created above
   - On Libraries section: Check if any error jar file not found. If any errors path, please re-add the jar file from WEB-INF\Libraries
+  - Build project
 
 - Open phpMyAdmin
   - Create new database fruit and import data. **fruit.sql** is inside databse folder
