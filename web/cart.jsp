@@ -125,12 +125,15 @@
                                 <% 
                                     if(!orders.isEmpty()){
                                         for(Order order : orders){
+                                            String imagePath = get.getFilePath(order.getImage(), String.valueOf(order.getFruitId())) == null 
+                                                               ? "./images/NoImage.png" 
+                                                               : get.getFilePath(order.getImage(), String.valueOf(order.getFruitId()));
                                         %>
                                             <div class="cart_item">
                                                 <div class="detail_box">
                                                     <div class="image">
                                                         <img
-                                                            src="<% out.print(get.getFilePath(order.getImage(), String.valueOf(order.getFruitId()))); %>" />
+                                                            src="<%= imagePath %>" />
                                                     </div>
                                                     <div class="detail">
                                                         <p><strong><%= order.getName() %></strong></p>
