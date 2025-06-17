@@ -45,3 +45,17 @@ This is tiny project created by a team has 4 members for final project in **Serv
   - **Admin:** admin, 12345
   - **User:** vothana, 12345
 
+### Screenshots:
+#### Login
+<img title="admin" alt="admin" src="./images/Login.png">
+
+#### Admin
+<img title="admin" alt="admin" src="./images/admin.png">
+<img title="admin_delete" alt="admin_delete" src="./images/admin_delete.png">
+
+
+#### Store
+<img title="admin" alt="admin" src="./images/home.png">
+<img title="admin" alt="admin" src="./images/store.png">
+<img title="admin" alt="admin" src="./images/cart.png">
+<img title="admin" alt="admin" src="./images/Checkout.png">
